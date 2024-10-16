@@ -1,5 +1,4 @@
 .header {
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -16,10 +15,10 @@
     background-color: white;
 }
 .header-left-section {
-
+    margin-left: 20px;
 }
 .header-middle-section {
-    margin-left: 220px;
+    margin-left: 140px;
 }
 .header-right-section {
     display: flex;

@@ -3,10 +3,8 @@
     flex-direction: row;
     margin-top: 98px;
     margin-left: 62px;
-    
     height: 1000px;
     justify-content: space-around;
-    
 }
 
 .overview-order {
@@ -58,3 +56,6 @@
     text-align: center;
     
 }
+
+
+
