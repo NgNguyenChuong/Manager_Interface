@@ -16,6 +16,10 @@
     background-color: white;
 }
 .header-left-section {
+    font-weight: bold;
+    font-family:Arial;
+    width: 500px;
+    margin-left:20px;
 
 }
 .header-middle-section {
