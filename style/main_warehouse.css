@@ -35,6 +35,9 @@
 
 }
 
+
+
+
 .container-roll-his {
     display: flex;
     flex-direction: row;
@@ -93,8 +96,11 @@
     max-width: 1200px;
     
 }
-.button-handle-product {
-    
+.handle-product {
+    position: relative;
+
+}
+.button-handle-product { 
     height: 40px;
     width: 80px;
     background-color: #6AA173;
@@ -112,6 +118,53 @@
 .button-handle-product:active {
     opacity: 0.75;
 }
+
+.active-handle-contain {
+    position: absolute;
+    width: 300px;
+    height: 120px;
+    background-color:white;
+    top: 100%;
+    right: 27%;
+    display: none;
+    z-index: 10;
+    border-radius: 4px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #35635A;
+    
+    
+}
+.handle-product:hover .active-handle-contain {
+   
+    display: flex;
+    gap: 10;
+    flex-direction: row;
+    justify-content: space-around;
+    border: none;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #35635A;
+    box-shadow: 1px 1px 1px 1px #35635A;
+    
+}
+.button-update, .button-delete {
+    width: 80px;
+    height: 40px;
+    margin-top: 40px;
+    background-color:#35635A  ;
+    border: none;
+    border-radius: 4px;
+    color: #FAD4AE;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+
+
 .info-overview-order-product {
     display: flex;
     flex-direction: column;
@@ -138,4 +191,53 @@
 }
 .button-add:active {
     opacity: 0.75;
+}
+.container-add-product {
+    position: relative;
+}
+.active-add-container {
+    position: absolute;
+    height: 700px;
+    width: 700px;
+    background-color: white;
+    display: none;
+    top: 100%;
+    right: 0%;
+    border-radius: 4px;
+    z-index: 10;
+    
+    
+}
+.container-add-product:hover .active-add-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-width: 1px;
+    border-style: solid;
+    border-color: grey;
+}
+.input-add-product {
+    height: 25px;
+    padding: 5px;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 15px;
+    border-radius: 4px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #35635A;
+    box-shadow: 1px 1px 1px 1px #35635A
+
+}
+.container-button-add-product-active {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 30px;
+    margin-right: 40px;
+}
+.button-add-product-active  {
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
 }

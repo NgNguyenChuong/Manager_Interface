@@ -1,0 +1,15 @@
+.left-section-customer {
+    display: flex;
+    flex: 1;
+    background-color: lightblue;
+}
+.middle-section-customer {
+    display: flex;
+    flex: 1;
+    background-color: lightcoral;
+}
+.right-section-customer {
+    display: flex;
+    flex: 1;
+    background-color: lightblue;
+}

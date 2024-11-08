@@ -59,25 +59,30 @@
                         <p>Trang chủ</p>
             </div>
         </a>
-            <a href="wareHouse.html" style="text-decoration: none; color: black;"><div class="container-function-selection">
-                <button class="button-function-selection" style="
-                        background-color: #6AA173;">
-                    <i class="fa-solid fa-warehouse" style="
+            <a href="wareHouse.html" style="text-decoration: none; color: black;">
+                <div class="container-function-selection">
+                    <button class="button-function-selection" style="
+                            background-color: #6AA173;">
+                        <i class="fa-solid fa-warehouse" style="
                         font-size: 20px;
                         color: #FAD4AE;
                     "></i></button>
-                <p>Kho hàng</p>
-            </div></a>
+                    <p>Kho hàng</p>
+                </div>
+            </a>
             
-            <div class="container-function-selection">
-                <button class="button-function-selection">
-                    <i class="fa-solid fa-users" style="
-                        font-size: 20px;
-                        color: #FAD4AE;
-                    "></i>
-                </button>
-                <p>Khách hàng</p>
-            </div>
+            <a href="customer.html" style="text-decoration: none; color: black;">
+                <div class="container-function-selection">
+                    <button class="button-function-selection">
+                        <i class="fa-solid fa-users" style="
+                            font-size: 20px;
+                            color: #FAD4AE;
+                        "></i>
+                    </button>
+                    <p>Khách hàng</p>
+                </div>
+            </a>
+            
             <div class="container-function-selection">
                 <button class="button-function-selection">
                 <i class="fa-solid fa-list-check" style="
@@ -121,7 +126,29 @@
                             font-weight:700;
                         
                         ">Quản lý kho</p>
-                        <button class="button-add">Add</button>
+                        <div class="container-add-product">
+                            <button class="button-add">Add</button>
+                            <div class="active-add-container"> 
+                                
+                                <button class="button-add-product-active" style="
+                                    margin-left: 40px;   
+                                ">Thêm ảnh</button>
+                                <input class="input-add-product" type="text" placeholder="Thêm tên">
+                                <input class="input-add-product" type="text" placeholder="Mô tả">
+                                <input class="input-add-product" type="text" placeholder="Xuất xứ">
+                                <input class="input-add-product" type="text" placeholder="Thành phần">
+                                <input class="input-add-product" type="text" placeholder="Khối lượng tịnh">
+                                <input class="input-add-product" type="text" placeholder="Hạn sử dụng">
+                                <input class="input-add-product" type="text" placeholder="Gợi ý sử dụng">
+                                <input class="input-add-product" type="text" placeholder="Hướng dẫn bảo quản">
+                                <div class="container-button-add-product-active">
+                                    <button class="button-add-product-active">Thêm</button>
+                                    <button class="button-add-product-active">Xoá</button>
+                                </div>
+                                
+
+                            </div>
+                        </div>
                     </div>
                     <div class="container-main-product">
                         <div class="overview-product">
@@ -136,8 +163,12 @@
                                 <p>Kho: 34</p>
                                 
                             </div>
-                            <div>
+                            <div class="handle-product">
                                 <button class="button-handle-product">xu ly</button>
+                                <div class="active-handle-contain">
+                                    <button class="button-delete">Xoa san pham</button>
+                                    <button class="button-update">Chinh sua</button>
+                                </div>
                             </div>
                         </div>
                         <div class="overview-product">
@@ -152,8 +183,12 @@
                                 <p>Kho: 34</p>
                                 
                             </div>
-                            <div>
+                            <div class="handle-product">
                                 <button class="button-handle-product">xu ly</button>
+                                <div class="active-handle-contain">
+                                    <button class="button-delete">Xoa san pham</button>
+                                    <button class="button-update">Chinh sua</button>
+                                </div>
                             </div>
                         </div>
                         <div class="overview-product">
@@ -168,8 +203,12 @@
                                 <p>Kho: 34</p>
                                 
                             </div>
-                            <div class="container-button">
+                            <div class="handle-product">
                                 <button class="button-handle-product">xu ly</button>
+                                <div class="active-handle-contain">
+                                    <button class="button-delete">Xoa san pham</button>
+                                    <button class="button-update">Chinh sua</button>
+                                </div>
                             </div>
                         </div>
                     </div>
