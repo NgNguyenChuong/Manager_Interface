@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Đơn Hàng Số 5</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/order.css">
+    <link rel="stylesheet" href="../style/sidebar.css">
+    <link href="../icon/css/all.css" rel="stylesheet">
+    <link href="../style/generall.css" rel="stylesheet">
+    <link href="../style/main.css" rel="stylesheet">
+    <link href="../style/orderDetail1.css" rel="stylesheet">
+    <link href="./asset/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../style/LogInfo.css" rel="stylesheet">
+</head>
+
+<body style="height: 1000px;">
+  <script src="./asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <div class="header">
+    <div class="header-left-section">
+      <p style="
+       font-size: 35px;
+       font-weight: bold;">Đơn hàng Số 5</p>
+    </div>
+    <div class="header-middle-section">
+      <img class="logo-store" src="../image/logo.webp">
+    </div>
+    <div class="header-right-section">
+      <div class="bell-notification">
+        <i class="fa-regular fa-bell" style="
+                        color: #64792c;
+                        font-size: 45px;
+                        "></i>
+      </div>
+      <div>
+        <div class="position-employee">
+          <p>Staff</p>
+        </div>
+        <div class="name-employee">
+          <p>Nguyen Chuong</p>
+        </div>
+      </div>
+      <div>
+        <img class="avatar" class src="/image/chuong-avatar.jpg" alt="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" >            
+        
+    </div>
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+      <div  style=" border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(176, 176, 176);" class="offcanvas-header">
+        <img class="avatar" class src="/image/chuong-avatar.jpg" alt="" >
+        <div style="display: flex; flex-direction: column; height: 95px;">
+        <h4 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">NgNguyenChuong</h4>
+        <h5   >Ng_Nguyen_Chuong</h5>
+      </div>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body" >
+        <a href="" class="navbar_user"> 
+          <i class="fa-solid fa-user" ></i>
+          <p>Thông tin cá nhân </p>
+        </a>
+        <a href="#logoutModal" class="navbar_logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <p>Đăng xuất</p>
+        </a>
+        <div id="logoutModal" class="modal">
+          <div class="modal_content">
+            <h2>Xác nhận đăng xuất</h2>
+            <p>Bạn có chắc chắn muốn đăng xuất không?</p>
+            <div class="modal_actions">
+              
+              <a href="/logout" class="btn_2 confirm">Đăng xuất</a>
+              <a href="#" class="btn_2 cancel">Hủy</a>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="side-bar">
+    <div class="container-function-selection">
+      <a href="homePage.html" style="text-decoration: none; color: black;">
+        <div class="backToHome">
+          <button class="button-function-selection">
+            <i class="fa-solid fa-house" style="
+            font-size: 20px;
+            color: #FAD4AE;
+            "></i>
+          </button>
+          <p>Trang chủ</p>
+        </div>
+      </a>
+      <a href="wareHouse.html" style="text-decoration: none; color: black;">
+        <div class="container-function-selection">
+          <button class="button-function-selection">
+            <i class="fa-solid fa-warehouse" style="font-size: 20px;
+            color: #FAD4AE;
+        "></i></button>
+          <p>Kho hàng</p>
+        </div>
+      </a>
+      <div class="container-function-selection">
+        <button class="button-function-selection">
+          <i class="fa-solid fa-users" style="
+                        font-size: 20px;
+                        color: #FAD4AE;
+                    "></i>
+        </button>
+        <p>Khách hàng</p>
+      </div>
+      <div class="container-function-selection">
+        <button class="button-function-selection" style="background-color: #6aa173;">
+          <i class="fa-solid fa-list-check" style="
+                    font-size: 20px;
+                    color: #FAD4AE;
+                    "></i>
+        </button>
+        <p>Đơn hàng</p>
+      </div>
+      <a href="analyzePage.html" style="text-decoration: none; color: black;">
+        <div class="container-function-selection">
+          <button class="button-function-selection">
+            <i class="fa-solid fa-chart-simple" style="
+                    font-size: 20px;
+                    color: #FAD4AE;
+                "></i>
+          </button>
+          <p>Thống kê</p>
+        </div>
+      </a>
+      <div class="container-function-selection">
+        <button class="button-function-selection">
+          <i class="fa-solid fa-circle-user" style="
+                     font-size: 20px;
+                     color: #FAD4AE;
+                 "></i>
+        </button>
+        <p>Tài khoản</p>
+      </div>
+    </div>
+  </div>
+  <!-- Chi tiết hóa đơn -->
+  <div class="container-order-detail">
+    <div class="container-bar-operation">
+      <p style="font-size: 30px;
+                font-weight:700px;">
+        Chi tiết đơn hàng</p>
+    </div>
+
+    <div class="order-summary">
+      <div class="order-info">
+        <h2>Thông tin Đơn hàng</h2>
+        <div class="Test">
+          <p><strong>Mã đơn hàng:</strong> DH005</p>
+          <p class="par-style"><strong>Trạng thái:</strong> <span style=" background-color: #ffcccc;
+  color: #a94442;">Đã hủy &#10006;</span></p>
+          <p class="par-style"><strong>Tổng giá trị:</strong> 54,000 VND</p>
+          <p class="par-style"><strong>Thời gian dự kiến:</strong> 0 ngày</p>
+          <p class="par-style"><strong>(Đơn hàng sẽ được trả về cho công ty sớm nhất.)</strong></p>
+
+        </div>
+      </div>
+
+      <div class="customer-info">
+        <h2>Thông tin Khách hàng</h2>
+        <p><strong>Họ tên:</strong> MCK</p>
+        <p class="par-style2"><strong>Địa chỉ giao hàng:</strong> Quận 4, TP.HCM</p>
+        <p class="par-style2"><strong>Số lượng đặt hàng:</strong> 6</p>
+      </div>
+    </div>
+    <!-- Chi tiết của sản phẩm -->
+    <h2 style="margin-top: -9px;">Chi tiết Sản phẩm</h2>
+    <!-- <div class="product-container-card"> -->
+      <div class="product-card">
+        <div>
+          <img class="product-image" src="../image/product3.webp"
+            style="margin-top: 0; margin-left: 10px; width: 90px; height: 90px; border-radius: 50%;">
+        </div>
+        <div class="info-overview-order-product">
+          <p style="margin-bottom: 15px"><strong>Tên sản phẩm:</strong><span class="space">Cà chua</span> </p>
+          <p><strong>Số lượng:</strong> <span class="space">2</span></p>
+          <p><strong>Khối lượng:</strong> <span class="space">0.5 kg</span></p>
+          <p><strong>Giá mỗi kg:</strong> <span class="space">5,000 VND</span></p>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img class="product-image" src="../image/caingot.jpg"
+            style="margin-top: 0; margin-left: 10px; width: 90px; height: 90px; border-radius: 50%;">
+        </div>
+        <div class="info-overview-order-product">
+          <p style="margin-bottom: 15px"><strong>Tên sản phẩm:</strong><span class="space">Cải ngọt</span> </p>
+          <p><strong>Số lượng:</strong> <span class="space">2</span></p>
+          <p><strong>Khối lượng:</strong> <span class="space">0.3 kg</span></p>
+          <p><strong>Giá mỗi kg:</strong> <span class="space">10,000 VND</span></p>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img class="product-image" src="../image/gaohuonglai.jpg"
+            style="margin-top: 0; margin-left: 10px; width: 90px; height: 90px; border-radius: 50%;">
+        </div>
+        <div class="info-overview-order-product">
+          <p style="margin-bottom: 15px"><strong>Tên sản phẩm:</strong><span class="space">Gạo thơm hương Lài</span> </p>
+          <p><strong>Số lượng:</strong> <span class="space">2</span></p>
+          <p><strong>Khối lượng:</strong> <span class="space">1 kg</span></p>
+          <p><strong>Giá mỗi kg:</strong> <span class="space">20,000 VND</span></p>
+        </div>
+      </div>
+    <div class="Button">
+      <div class="back-button-delete">
+        <a class="btn1" href="#logoutModal-1" class="navbar_logout">Xóa đơn hàng</a>
+        
+      </div>
+       <div id="logoutModal-1" class="modal">
+        <div class="modal_content">
+          <h2>Xác nhận xóa đơn <i class="fa-solid fa-trash-can"></i></h2>
+          <p>Bạn có chắc chắn muốn xóa đơn này không?</p>
+          <div class="modal_actions">
+            
+            <a href="/logout" class="btn_2 confirm">Có</a>
+            <a href="#" class="btn_2 cancel">Không</a>
+          </div>
+        </div>
+      </div>
+      <div class="back-button">
+        <a href="./mainOrderPage.html" class="btn_1">Quay lại danh sách đơn hàng</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+
+</html>

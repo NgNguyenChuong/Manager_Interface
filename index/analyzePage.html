@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Thống Kê Kinh Doanh</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="../style/header.css">
+  <link rel="stylesheet" href="../style/sidebar.css">
+  <link rel="stylesheet" href="../icon/css/all.css">
+  <link rel="stylesheet" href="../style/generall.css">
+  <link rel="stylesheet" href="/style/analyzeStyle.css">
+  <link rel="stylesheet" href="../style/main.css">
+  <link rel="stylesheet" href="./asset/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style/LogInfo.css">
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <!-- <style>
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+.header {
+  max-width: 100%;
+}
+    .sidebar {
+    
+      max-width: 30%;
+    }
+
+    .content {
+      width: 80%;
+    }
+  </style> -->
+
+</head>
+
+
+<body style="height: 5000px;">
+  <script src="./asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <div class="header">
+    <div class="header-left-section">
+      <p style="
+       font-size: 35px;
+       font-weight: bold;">Thống kê</p>
+    </div>
+    <div class="header-middle-section">
+      <img class="logo-store" src="../image/logo.webp">
+    </div>
+    <div class="header-right-section">
+      <div class="bell-notification">
+        <i class="fa-regular fa-bell" style="
+                        color: #64792c;
+                        font-size: 45px;
+                        "></i>
+      </div>
+      <div>
+        <div class="position-employee">
+          <p>Staff</p>
+        </div>
+        <div class="name-employee">
+          <p>Nguyen Chuong</p>
+        </div>
+      </div>
+      <div>
+        <img class="avatar" class src="/image/chuong-avatar.jpg" alt="" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+      </div>
+      <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div style=" border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(176, 176, 176);" class="offcanvas-header">
+          <img class="avatar" class src="/image/chuong-avatar.jpg" alt="">
+          <div style="display: flex; flex-direction: column; height: 95px;">
+            <h4 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">NgNguyenChuong</h4>
+            <h5>Ng_Nguyen_Chuong</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <a href="" class="navbar_user">
+            <i class="fa-solid fa-user"></i>
+            <p>Thông tin cá nhân </p>
+          </a>
+          <a href="#logoutModal" class="navbar_logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <p>Đăng xuất</p>
+          </a>
+          <div id="logoutModal" class="modal">
+            <div class="modal_content">
+              <h2>Xác nhận đăng xuất</h2>
+              <p>Bạn có chắc chắn muốn đăng xuất không?</p>
+              <div class="modal_actions">
+
+                <a href="/logout" class="btn_2 confirm">Đăng xuất</a>
+                <a href="#" class="btn_2 cancel">Hủy</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="side-bar ">
+    <div class="container-function-selection">
+      <a href="homePage.html" style="text-decoration: none; color: black;">
+        <div class="backToHome">
+          <button class="button-function-selection">
+            <i class="fa-solid fa-house" style="
+            font-size: 20px;
+            color: #FAD4AE;
+            "></i>
+          </button>
+          <p>Trang chủ</p>
+        </div>
+      </a>
+      <a href="wareHouse.html" style="text-decoration: none; color: black;">
+        <div class="container-function-selection">
+          <button class="button-function-selection">
+            <i class="fa-solid fa-warehouse" style="font-size: 20px;
+            color: #FAD4AE;
+        "></i></button>
+          <p>Kho hàng</p>
+        </div>
+      </a>
+      <div class="container-function-selection">
+        <button class="button-function-selection">
+          <i class="fa-solid fa-users" style="
+                        font-size: 20px;
+                        color: #FAD4AE;
+                    "></i>
+        </button>
+        <p>Khách hàng</p>
+      </div>
+      <a href="mainOrderPage.html" style="text-decoration: none; color: black;">
+        <div class="container-function-selection">
+          <button class="button-function-selection">
+            <i class="fa-solid fa-list-check" style="
+                    font-size: 20px;
+                    color: #FAD4AE;
+                    "></i>
+          </button>
+          <p>Đơn hàng</p>
+        </div>
+      </a>
+      <div class="container-function-selection">
+        <button class="button-function-selection" style="background-color: #6aa173;">
+          <i class="fa-solid fa-chart-simple" style="
+                    font-size: 20px;
+                    color: #FAD4AE;
+                "></i>
+        </button>
+        <p>Thống kê</p>
+      </div>
+      <a href="./accountPage.html" style="text-decoration: none; color: black;">
+        <div class="container-function-selection">
+          <button class="button-function-selection">
+            <i class="fa-solid fa-circle-user" style="
+                     font-size: 20px;
+                     color: #FAD4AE;
+                 "></i>
+          </button>
+          <p>Tài khoản</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <!-- Phần Body -->
+  <div class="container-analyze content">
+    <!-- Tiêu đề trang -->
+    <div class="container-bar-operation">
+      <p style="font-size: 30px;
+                font-weight:700px;">
+        Chi tiết thống kê</p>
+    </div>
+
+    <!-- Chọn khoảng thời gian -->
+    <div class="filter-section">
+      <form action>
+        <label for="filter-select">Thống kê</label>
+        <select name="filter-select" id="filter-select" style="width: 100px; text-align: center;">
+          <option value>Tất cả</option>
+          <option value>Doanh số</option>
+          <option value>Sản phẩm bán chạy</option>
+          <option value>Nhân viên</option>
+          <option value>Đơn hàng</option>
+        </select>
+        <label for="filter-select">
+          <p style="margin-left: 10px;">Loại sản phẩm</p>
+        </label>
+        <select name="filter-select" id="filter-select" style="width: 100px; text-align: center;">
+          <option value="All">Tất cả</option>
+          <option value="Meat">Thịt</option>
+          <option value="Vegetable">Rau</option>
+          <option value="Egg">Trứng</option>
+          <option value="Fruit">Trái cây</option>
+        </select>
+        <label for="date-from">
+          <p style="margin-left: 10px;">Từ ngày:</p>
+        </label>
+        <input type="date" id="date-from">
+
+        <label for="date-to">
+          <p style="margin-left: 10px;">Đến ngày:</p>
+        </label>
+        <input type="date" id="date-to">
+
+        <button class="filter-button">Lọc dữ liệu</button>
+      </form>
+    </div>
+
+    <!-- Thống kê mặt hàng -->
+    <div class="statistic-section">
+      <h2>Các mặt hàng bán ra</h2>
+      <!-- Thực phẩm bán chạy -->
+      <table class="statistic-table">
+        <thead>
+          <tr>
+            <th>Mặt hàng</th>
+            <th>Số lượng bán ra</th>
+            <th>Tổng tiền thu được</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dưa leo</td>
+            <td>50</td>
+
+            <td>500,000 VND</td>
+          </tr>
+          <tr>
+            <td>Củ cải</td>
+            <td>30</td>
+            <td>300,000 VND</td>
+          </tr>
+          <tr>
+            <td>Thịt bò Mỹ</td>
+            <td>100</td>
+            <td>2,000,000 VND</td>
+          </tr>
+          <tr>
+            <td>Bắp cải</td>
+            <td>45</td>
+            <td>900,000 VND</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 10px;"><b>.Mặt hàng bán chạy nhất:</b> Thịt bò Mỹ (số lượng bán ra: 100 )</p>
+      <p style="margin-top: 10px;"><b>.Mặt hàng bán ế nhất:</b> Củ cải (số lượng bán ra: 30 )</p>
+
+    </div>
+    <!-- Thống kê khách hàng -->
+    <div class="statistic-section">
+      <h2>Top 5 khách hàng mua nhiều đơn nhất tuần qua</h2>
+      <table class="statistic-table">
+        <thead>
+          <tr>
+            <th>Khách Hàng</th>
+            <th>Đơn hàng chủ yếu</th>
+            <th>Tổng Số Hóa Đơn</th>
+            <th>Tổng Doanh Thu</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Trần Quốc An</td>
+            <td>Gạo ST25, cà rốt, thịt heo</td>
+            <td>10</td>
+            <td>25,000 VND</td>
+          </tr>
+          <tr>
+            <td>Nguyễn Nguyên Chương</td>
+            <td>Gạo ST25, cà rốt, thịt heo</td>
+            <td>8</td>
+
+            <td>800,000 VND</td>
+          </tr>
+          <tr>
+            <td>Đỗ Thái Hòa</td>
+            <td>Gạo ST25, cà rốt, thịt heo</td>
+            <td>8</td>
+            <td>800,000 VND</td>
+          </tr>
+          <tr>
+            <td>Nguyễn Văn A</td>
+            <td>Gạo ST25, cà rốt, thịt heo</td>
+
+            <td>8</td>
+            <td>800,000 VND</td>
+          </tr>
+          <tr>
+            <td>Trần Thị B</td>
+            <td>Gạo ST25, cà rốt, thịt heo</td>
+            <td>8</td>
+            <td>800,000 VND</td>
+          </tr>
+          <tr>
+            <th colspan="3">Tổng cộng:</th>
+            <td>4.200.000 đ</td>
+          </tr>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Sản phẩm khuyến mãi -->
+    <div class="statistic-section">
+      <h2>Các sản phẩm đang trong thời gian khuyến mãi</h2>
+      <table class="statistic-table">
+        <thead>
+          <tr>
+            <th>Tên sản phẩm</th>
+            <th>Ảnh</th>
+            <th>Số lượng</th>
+            <th>Giá tiền</th>
+            <th>Chương trình khuyến mãi</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bánh gạo vị bina hữu cơ </td>
+            <td> <img style="height: 150px;" src="/image/banhgao.jpg"></td>
+            <td>10</td>
+            <td>25,000 VND</td>
+            <td>Mua trên 5kg giảm 10% trên hóa đơn </td>
+          </tr>
+          <tr>
+            <td>Thịt bò Kobe</td>
+            <td> <img src="/image/thitboKobe.jpg"></td>
+            <td>8</td>
+            <td>300,000 VND</td>
+            <td>Mua 2 tính tiền 1</td>
+          </tr>
+          <tr>
+            <td> Thịt heo</td>
+            <td><img style="height: 100px;" src="/image/thitheo.webp"></td>
+
+            <td>8</td>
+            <td>90,000 VND</td>
+            <td>Giảm 15% khi mua cùng loại </td>
+          </tr>
+          <tr>
+            <td>Gạo ST25</td>
+            <td> <img src="/image/gaoST25.jpg"></td>
+            <td>8</td>
+            <td>60,000 VND</td>
+            <td>Mua 2 tính tiền 1</td>
+          </tr>
+          <tr>
+            <td>Gạo hương lài</td>
+            <td> <img src="/image/gaohuonglai.jpg"></td>
+            <td>8</td>
+            <td>70,000 VND</td>
+            <td>Mua 1 bao gạo tặng 1 chai dầu ăn</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Sản phẩm hết hàng -->
+    <div class="statistic-section">
+      <h2>Các sản phẩm hết hàng</h2>
+      <table class="statistic-table">
+        <thead>
+          <tr>
+            <th>Tên sản phẩm</th>
+            <th>Ảnh</th>
+            <th>Số lượng</th>
+            <th>Tình trạng</th>
+            <th>Giá tiền</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cải ngọt </td>
+            <td> <img style="height: 150px;" src="/image/caingot.jpg"></td>
+            <td>0</td>
+            <td><button type="button" class="btn btn-danger"><b>Hết hàng</b></button></td>
+            <td>25,000 VND</td>
+
+          </tr>
+          <tr>
+            <td>Cà chua</td>
+            <td> <img src="/image/product3.webp"></td>
+            <td>Chưa cập nhật</td>
+            <td><button type="button" style="color:white" class="btn btn-warning"><b>Đang xử lý</b></button></td>
+            <td>13,000 VND</td>
+          </tr>
+          <tr>
+            <td> Bắp cải</td>
+            <td><img style="height: 100px;" src="/image/product1.webp"></td>
+
+            <td>0</td>
+            <td><button type="button" class="btn btn-danger"><b>Hết hàng</b></button></td>
+
+            <td>40,000 VND</td>
+
+          </tr>
+          <tr>
+
+        </tbody>
+      </table>
+    </div>
+    <!-- Biểu đồ thống kê -->
+    <div class="statistic-section">
+      <h2>Thống kê quý 1-2024</h2>
+      <canvas class="chart-container" id="visitors-chart" height="100"></canvas>
+    </div>
+  </div>
+  <!-- Script cho biểu đồ-->
+  <script src="/icon/js/Chart.min.js"></script>
+  <script src="/icon/js/chart.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,4 @@
 .header {
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -7,19 +6,22 @@
     top: 0;
     right: 0;
     left: 70px;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(176, 176, 176);
     height: 98px;
     align-items: center;
     z-index: 100;
     background-color: white;
 }
 .header-left-section {
-
+    margin-left: 20px;
+    
 }
-.header-middle-section {
-    margin-left: 220px;
+.header-left-title {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+ .header-middle-section {
+    margin-left: 140px;
 }
 .header-right-section {
     display: flex;
@@ -48,6 +50,7 @@
     text-align: right;
     font-weight: bold;
     font-size: 20px;
+    
 }
 .name-employee {
     margin-top: 7px;

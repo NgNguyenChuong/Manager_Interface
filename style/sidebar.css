@@ -26,7 +26,7 @@
 }
 .backToHome {
     background-color: #35635A;
-    margin-bottom: 34px;
+    margin-bottom: 20px;
     margin-top: 26px;
     cursor: pointer;
     font-weight: bold;
@@ -37,6 +37,7 @@
     font-size: 10px;
     font-weight: bold;
     margin-bottom: 20px;
+    width: 54px;
 
 
 }

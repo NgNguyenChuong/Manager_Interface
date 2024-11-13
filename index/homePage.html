@@ -13,12 +13,17 @@
         <link href="../icon/css/all.css" rel="stylesheet">
         <link href="../style/generall.css" rel="stylesheet">
         <link href="../style/main.css" rel="stylesheet">
-        
-
+        <link rel="stylesheet" href="./asset/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/style/LogInfo.css">
     </head>
     <body style="height: 10000px;">
+        <script src="./asset/bootstrap/js/bootstrap.bundle.min.js"></script>
         <div class="header">
-            <div class="header-left-section">left section</div>
+            <div class="header-left-section">
+                <p style="
+                    font-size: 35px;
+                    font-weight: bold;">Trang chủ</p>
+            </div>
             <div class="header-middle-section">
                 <img class="logo-store" src="../image/logo.webp">
             </div>
@@ -36,9 +41,45 @@
                     <div class="name-employee">
                         <p>Nguyen Chuong</p>
                     </div>
+                    
                 </div>
                 <div>
-                    <img class="avatar" src="../image/chuong-avatar.jpg">
+                    <img class="avatar" class src="/image/chuong-avatar.jpg" alt="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" >            
+                    
+                </div>
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                  <div  style=" border-bottom-width: 1px;
+                  border-bottom-style: solid;
+                  border-bottom-color: rgb(176, 176, 176);" class="offcanvas-header">
+                    <img class="avatar" class src="/image/chuong-avatar.jpg" alt="" >
+                    <div style="display: flex; flex-direction: column; height: 95px;">
+                    <h4 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">NgNguyenChuong</h4>
+                    <h5   >Ng_Nguyen_Chuong</h5>
+                  </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body" >
+                    <a href="" class="navbar_user"> 
+                      <i class="fa-solid fa-user" ></i>
+                      <p>Thông tin cá nhân </p>
+                    </a>
+                    <a href="#logoutModal" class="navbar_logout">
+                      <i class="fa-solid fa-right-from-bracket"></i>
+                      <p>Đăng xuất</p>
+                    </a>
+                    <div id="logoutModal" class="modal">
+                      <div class="modal_content">
+                        <h2>Xác nhận đăng xuất</h2>
+                        <p>Bạn có chắc chắn muốn đăng xuất không?</p>
+                        <div class="modal_actions">
+                          
+                          <a href="/logout" class="btn_2 confirm">Đăng xuất</a>
+                          <a href="#" class="btn_2 cancel">Hủy</a>
+                        </div>
+                      </div>
+                    </div>
+                
+                  </div>
                 </div>
             </div>
         </div>
@@ -55,14 +96,18 @@
                 </button>
                 <p>Trang chủ</p>
             </div>
-            <div class="container-function-selection">
+
+            <a href="wareHouse.html" style="text-decoration: none; color: black;">
+                <div class="container-function-selection">
                 <button class="button-function-selection">
                     <i class="fa-solid fa-warehouse" style="
                         font-size: 20px;
                         color: #FAD4AE;
                     "></i></button>
                 <p>Kho Hàng</p>
-            </div>
+                </div>
+            </a>
+            
             <div class="container-function-selection">
                 <button class="button-function-selection">
                     <i class="fa-solid fa-users" style="
@@ -72,15 +117,18 @@
                 </button>
                 <p>Khách hàng</p>
             </div>
-            <div class="container-function-selection">
-                <button class="button-function-selection">
-                <i class="fa-solid fa-list-check" style="
-                    font-size: 20px;
-                    color: #FAD4AE;
-                    "></i>
-                </button>
-                <p>Đơn hàng</p>
-            </div>
+            <a  href="mainOrderPage.html" style="text-decoration: none; color: black;">
+                <div class="container-function-selection">
+                    <button class="button-function-selection">
+                        <i class="fa-solid fa-list-check" style="
+                        font-size: 20px;
+                        color: #FAD4AE;
+                        "></i>
+                    </button>
+                    <p>Đơn hàng</p>
+                </div>
+            </a>
+            <a href="analyzePage.html" style="text-decoration: none; color: black;">
             <div class="container-function-selection">
                <button class="button-function-selection">
                 <i class="fa-solid fa-chart-simple" style="
@@ -90,6 +138,7 @@
                 </button>
                 <p>Thống kê</p>
             </div>
+        </a>
             <div class="container-function-selection">
                 <button class="button-function-selection">
                  <i class="fa-solid fa-circle-user" style="
@@ -110,12 +159,12 @@
                 <p class="notice">Đơn hàng chưa xử lý</p>
                 <div class="overview-order">
                     <div>
-                        <img class="avatar" src="../image/an-avatar.jpg" style="margin-top: 0; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%;">
+                        <img class="avatar" src="../image/sontung.webp" style="margin-top: 0; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%;">
                     </div>
                     <div class="info-overview-order">
                         <p style="
                             margin-bottom: 20px;   
-                        ">Nguyên Chương</p>
+                        ">Sơn Tùng</p>
                         <p>Ngày đặt hàng: 00/00/2000</p>
                     </div>
                     <div>
@@ -124,12 +173,12 @@
                 </div>
                 <div class="overview-order">
                     <div>
-                        <img class="avatar" src="../image/an-avatar.jpg" style="margin-top: 0; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%;">
+                        <img class="avatar" src="../image/mck.webp" style="margin-top: 0; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%;">
                     </div>
                     <div class="info-overview-order">
                         <p style="
                              margin-bottom: 20px;   
-                        ">Trần Quốc An</p>
+                        ">MCK</p>
                     <p>Ngày đặt hàng: 00/00/2000</p>
                     
                     </div>
@@ -139,12 +188,12 @@
                 </div>
                 <div class="overview-order">
                     <div>
-                        <img class="avatar" src="../image/an-avatar.jpg" style="margin-top: 0; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%;">
+                        <img class="avatar" src="../image/hth.webp" style="margin-top: 0; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%;">
                     </div>
                     <div class="info-overview-order">
                         <p style="
                             margin-bottom: 20px;   
-                        ">Trần Quốc An</p>
+                        ">HieuThuHai</p>
                         <p>Ngày đặt hàng: 00/00/2000</p>
                     </div>
                     <div>
@@ -158,13 +207,14 @@
                 <p class="notice">Hàng cần chú ý</p>
             <div class="overview-order">
                 <div>
-                    <img class="avatar" src="../image/an-avatar.jpg" style="margin-top: 0; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%;">
+                    <img class="avatar" src="../image/product1.webp" style="margin-top: 0; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%;">
                 </div>
                 <div class="info-overview-order">
                     <p style="
-                        margin-bottom: 20px;   
-                        ">Trần Quốc An</p>
-                    <p>Ngày đặt hàng: 00/00/2000</p>
+                        margin-bottom: 15px;   
+                        ">Bắp cải hữu cơ</p>
+                    <p>Ngày hết hạn: 00/00/2000</p>
+                    <p>Kho: 34</p>
                     
                 </div>
                 <div>
@@ -173,13 +223,14 @@
             </div>
             <div class="overview-order">
                 <div>
-                    <img class="avatar" src="../image/an-avatar.jpg" style="margin-top: 0; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%;">
+                    <img class="avatar" src="../image/product2.webp" style="margin-top: 0; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%;">
                 </div>
                 <div class="info-overview-order">
                     <p style="
-                        margin-bottom: 20px;   
-                    ">Trần Quốc An</p>
-                    <p>Ngày đặt hàng: 00/00/2000</p>
+                        margin-bottom: 15px;   
+                    ">Bó xôi hữu cơ</p>
+                    <p>Ngày hết hạn: 00/00/2000</p>
+                    <p>Kho: 40</p>
                  
                 </div>
                 <div>
@@ -188,13 +239,14 @@
             </div>
             <div class="overview-order">
                 <div>
-                    <img class="avatar" src="../image/an-avatar.jpg" style="margin-top: 0; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%;">
+                    <img class="avatar" src="../image/product3.webp" style="margin-top: 0; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%;">
                 </div>
                 <div class="info-overview-order">
                     <p style="
-                        margin-bottom: 20px;   
-                    ">Trần Quốc An</p>
-                    <p>Ngày đặt hàng: 00/00/2000</p>
+                        margin-bottom: 15px;   
+                    ">Cà chua hữu cơ</p>
+                    <p>Ngày hết hạn: 00/00/2000</p>
+                    <p>Kho: 3</p>
                    
                 </div>
                 <div>
@@ -203,7 +255,6 @@
             </div>
 
        </div>
-
-
+       
     </body>
 </html>
