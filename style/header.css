@@ -12,8 +12,16 @@
     background-color: white;
 }
 .header-left-section {
+<<<<<<< HEAD
     margin-left: 20px;
     
+=======
+    font-weight: bold;
+    font-family:Arial;
+    width: 500px;
+    margin-left:20px;
+
+>>>>>>> fc40d87dd468695f88393abc1d067b4728e37166
 }
 .header-left-title {
     font-size: 35px;
