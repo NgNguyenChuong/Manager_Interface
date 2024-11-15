@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Quản lý bán hàng</title>
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -117,6 +119,9 @@
             <div class="container-search">
                 <input class="search-bar" type="text"
                  placeholder="Tìm kiếm sản phẩm">
+                 <button class="search-icon-warehouse">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
             </div>
             <div class="container-roll-his">
                 <div class="container-roll-bar-operation">
@@ -129,10 +134,10 @@
                         <div class="container-add-product">
                             <button class="button-add">Add</button>
                             <div class="active-add-container"> 
-                                
-                                <button class="button-add-product-active" style="
+                                <input type="image" placeholder="them anh">
+                                <!-- <button class="button-add-product-active" style="
                                     margin-left: 40px;   
-                                ">Thêm ảnh</button>
+                                ">Thêm ảnh</button> -->
                                 <input class="input-add-product" type="text" placeholder="Thêm tên">
                                 <input class="input-add-product" type="text" placeholder="Mô tả">
                                 <input class="input-add-product" type="text" placeholder="Xuất xứ">
@@ -143,7 +148,9 @@
                                 <input class="input-add-product" type="text" placeholder="Hướng dẫn bảo quản">
                                 <div class="container-button-add-product-active">
                                     <button class="button-add-product-active">Thêm</button>
-                                    <button class="button-add-product-active">Xoá</button>
+                                    <button class="button-add-product-active" style="
+                                        background-color:  #D95E5E;
+                                    ">Xoá</button>
                                 </div>
                                 
 
@@ -166,7 +173,7 @@
                             <div class="handle-product">
                                 <button class="button-handle-product">xu ly</button>
                                 <div class="active-handle-contain">
-                                    <button class="button-delete">Xoa san pham</button>
+                                    <button onclick="confirmDeleteAction()" class="button-delete">Xoa san pham</button>
                                     <button class="button-update">Chinh sua</button>
                                 </div>
                             </div>
@@ -186,7 +193,7 @@
                             <div class="handle-product">
                                 <button class="button-handle-product">xu ly</button>
                                 <div class="active-handle-contain">
-                                    <button class="button-delete">Xoa san pham</button>
+                                    <button onclick="confirmDeleteAction()" class="button-delete">Xoa san pham</button>
                                     <button class="button-update">Chinh sua</button>
                                 </div>
                             </div>
@@ -205,7 +212,7 @@
                             <div class="handle-product">
                                 <button class="button-handle-product">xu ly</button>
                                 <div class="active-handle-contain">
-                                    <button class="button-delete">Xoa san pham</button>
+                                    <button onclick="confirmDeleteAction()" class="button-delete">Xoa san pham</button>
                                     <button class="button-update">Chinh sua</button>
                                 </div>
                             </div>
@@ -215,5 +222,17 @@
                 <div class="history"><p>Lịch sử</p></div>
             </div>
         </div>
+        <script>
+            function confirmDeleteAction() {
+                let confirmAction = confirm("Bạn có chắc chắn muốn xoá sản phẩm này không?");
+                if (confirmAction) {
+                    // Thực hiện hành động khi người dùng nhấn "OK"
+                    alert("Yêu cầu đã được thực hiện.");
+                } else {
+                    // Hành động khi người dùng nhấn "Cancel"
+                    alert("Yêu cầu đã bị hủy.");
+                }
+            }
+        </script>
     </body>
 </html>

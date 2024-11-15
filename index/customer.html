@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Quản lý bán hàng</title>
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -111,7 +113,13 @@
 
         <div class="container-main">
             <div class="left-section-customer">
-                <input class="search-bar-customer" type="text" placeholder="Tìm kiếm">
+                <div class="search-container-customer">
+                    <input class="search-bar-customer" type="text" placeholder="Tìm kiếm">
+                    <button class="search-icon-customer">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                
                 <div class="listCustomer"> 
                     <div class="customer" style="
                         background-color: #35635A;
@@ -295,7 +303,7 @@
                             color: white;
                         ">Chỉnh sửa
                         </button>
-                        <button class="feature-change-info-button" style="
+                        <button onclick="confirmDeleteCustomer()" class="feature-change-info-button" style="
                             background-color: rgb(217, 94, 94); 
                             color: white;   
                         ">Xoá người dùng
@@ -362,11 +370,20 @@
                     </div>
 
                 </div>
-                
-                
             </div>
-
         </div>
+        <script>
+            function confirmDeleteCustomer() {
+                let confirmAction = confirm("Bạn có chắc chắn muốn xoá khách hàng này không?");
+                if (confirmAction) {
+                    // Thực hiện hành động khi người dùng nhấn "OK"
+                    alert("Yêu cầu đã được thực hiện.");
+                } else {
+                    // Hành động khi người dùng nhấn "Cancel"
+                    alert("Yêu cầu đã bị hủy.");
+                }
+            }
+        </script>
 
     </body>
 </html>

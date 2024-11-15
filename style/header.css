@@ -52,3 +52,60 @@
     margin-top: 7px;
     
 }
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .header-left-section {
+        margin-left: 0;
+        text-align: center;
+    }
+    .header-middle-section {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .header-right-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .logo-store {
+        height: 60px;
+    }
+    .bell-notification {
+        margin: 0;
+    }
+    .position-employee {
+        font-size: 16px;
+        text-align: center;
+    }
+    .name-employee {
+        font-size: 14px;
+        text-align: center;
+    }
+    .avatar {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Responsive cho màn hình nhỏ hơn (dưới 480px) */
+@media (max-width: 480px) {
+    .header {
+        padding: 5px;
+    }
+    .header-left-section p {
+        font-size: 28px;
+    }
+    .bell-notification i {
+        font-size: 35px;
+    }
+    .position-employee {
+        font-size: 14px;
+    }
+    .name-employee {
+        font-size: 12px;
+    }
+}

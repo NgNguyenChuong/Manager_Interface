@@ -6,13 +6,46 @@
     margin-top: 20px;
 }
 .search-bar-customer {
-    width: 80%;
-    height: 50px;
-    border-radius: 10px;
-    margin-left: 30px;
+    
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 35px;
+    font-size: 20px;
+    border-color:#35635A;
+    width: 79%;
+    border-style: solid;
+
 }
-.listCustomer {
-    display: flex;
+.search-container-customer {
+    position: relative;
+    width:90%;
+
+}
+.search-icon-customer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 46px;
+    width: 45px;
+    font-size: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-style: solid;
+    border-color:#35635A;
+    cursor: pointer;
+    border-color:#35635A;
+    color:#35635A;
+    transition: all 0.2s;
+}
+.search-icon-customer:hover {
+    background-color: #35635A;
+    color:#FAD4AE;
+}
+.search-icon-customer:active {
+    opacity: 0.8;
+}
+.listCustomer{
     flex-direction: column;
     margin-left: 30px;
     border-width: 2px;
@@ -22,6 +55,7 @@
     border-color:#35635A;
     margin-top: 10px;
     border-radius: 10px;
+
     
 }
 .customer {
@@ -89,6 +123,14 @@
     padding: 10px;
     border: none;
     border-radius: 4px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.feature-change-info-button:hover, .feature-change-info-button:hover {
+    opacity: 0.9;
+}
+.feature-change-info-button:active, .feature-change-info-button:active {
+    opacity: 0.7;
 }
 .right-section-customer {
     display: flex;
@@ -121,4 +163,61 @@
     border-bottom-width: 1px;
     border-bottom-color:#35635A;
     padding: 10px;
+}
+@media (max-width: 1024px) {
+    .container-main {
+        display: flex;
+        flex-direction: column;
+        margin-top: 98px;
+        margin-left: 62px;
+        justify-content: center;
+        gap: 20px;
+        
+    }
+    .left-section-customer, .middle-section-customer, .right-section-customer {
+        width: 90%;
+        flex: none;
+        margin-top: 20px;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .listCustomer, .container-detail-info-customer, .history-customer {
+        width: 90%;
+        margin-left: 0;
+        margin-right: 0;
+        
+    }
+
+    .search-bar-customer {
+        width: 70%;
+    }
+
+    .feature-button-customer {
+        margin-right: 0;
+        justify-content: center;
+    }
+}
+
+/* Responsive cho màn hình rất nhỏ (điện thoại) */
+@media (max-width: 600px) {
+    .search-bar-customer {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .history-order {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .listCustomer {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .feature-button-customer {
+        gap: 5px;
+        padding: 0;
+    }
 }

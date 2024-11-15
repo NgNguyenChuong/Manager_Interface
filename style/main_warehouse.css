@@ -10,32 +10,56 @@
 } 
 
 .container-search {
-    display: flex;
-    justify-content:flex-start;
-    width: 100%;
+    
+    margin-left: 70px;
     margin-bottom: 40px;
-    margin-top: 20px;
+    margin-top: 40px;
+    position: relative;
+    width: 70%;
     
 }
 
 .search-bar {
     display: flex;
-    flex: 1;
+    flex: 0.75;
     height: 45px;
-    margin-top: 20px;
     border-radius: 10px;
     border-style: solid;
     border-color: #35635A;
     font-size: 20px;
     border-width: 3px;
-    max-width: 1450px;
     width: 100%;
-    margin-left: 20px;
-    margin-right: 20px;
+    
+
+    
+
 
 }
-
-
+.search-icon-warehouse {
+    margin-top: 20px;
+    position: absolute;
+    right: -10px;
+    top: -20px;
+    height: 52px;
+    border-width: 3px;
+    width: 60px;
+    font-size: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-style: solid;
+    border-color:#35635A;
+    cursor: pointer;
+    border-color:#35635A;
+    color:#35635A;
+    transition: all 0.2s;
+}
+.search-icon-warehouse:hover {
+    background-color: #35635A;
+    color:#FAD4AE;
+}
+.search-icon-warehouse:active {
+    opacity: 0.8;
+}
 
 
 .container-roll-his {
@@ -235,9 +259,22 @@
     justify-content: end;
     gap: 30px;
     margin-right: 40px;
+    
 }
 .button-add-product-active  {
     width: 80px;
     height: 30px;
     cursor: pointer;
+    background-color: #35635A;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.2s;
 }
+.button-add-product-active:hover {
+    opacity: 0.9;
+}
+.button-add-product-active:active {
+    opacity: 0.8;
+}
+
