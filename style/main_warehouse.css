@@ -278,3 +278,19 @@
     opacity: 0.8;
 }
 
+@media (max-width: 600px) {
+    .container-roll-his {
+        flex-direction: column;
+    }
+    .container-main-product {
+        margin-left: 0;
+    }
+    .overview-product {
+        font-size: 15px;
+    }
+    .button-handle-product {
+        margin-right: 10px;
+        width: 40px;
+    }
+    
+}
