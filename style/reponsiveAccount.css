@@ -1,0 +1,277 @@
+/* -----------------Phan reponsive--------------- */
+
+/* Smartphones (min >= 320px) (max <480px) ----------- */
+@media only screen and (min-device-width: 20em) and (max-device-width: 29.9375em) {
+  /* Phan header */
+  .header {
+    border-right:10px; 
+    justify-content: end;
+    position: fixed;
+    left:106px;
+
+   }
+   .header-right-section {
+    margin-right: 32px;
+    position: relative;
+    left: clamp(-14px, -4px, -4px);
+    top: 15px;
+   
+ 
+  }
+  .header-left-section {
+    position: relative;
+    left: clamp(49px, 50px, 100px);
+    top: 30px;
+   
+  }
+  .header-middle-section {
+    width: 35%;
+    height: auto;
+    position: relative;
+    right: clamp(52px, 75px, 104px);
+    bottom: 12px;
+   
+  }
+  .logo-store {
+    width: 140px;
+    height :auto;
+  }
+  .header-left-title {
+    font-size: 25px;
+    width: 113px;
+  }
+  .fa-bars {
+    font-size: 50px;
+    position: relative;
+    top: 42px;
+   }
+   .offcanvas.hiding, .offcanvas.show, .offcanvas.showing {
+   width: 100%;
+ 
+    }
+    .avatar {
+      width: 58px;
+      height: auto;
+     }  
+     .offcanvas.offcanvas-start {
+      background-color: #35635A;
+      max-width: 25%;
+     }
+   
+     .offcanvas-header{ 
+      display: flex;
+      flex-direction: row;
+      
+     }
+     .index-menu {
+      display: inline-block;
+      position: fixed;
+      height: 98px;
+      top: 0px;
+      left: 3px;
+      background-color: white;
+      width: 109px;
+     }
+  /* ------------------- */
+  /* Phan sidebar */
+  .side-bar {
+    display:none;
+  }
+  .container-function-selection{
+    margin-left: 0px;
+  }
+  .offcanvas-body {
+    margin-left: -2px;
+  }
+  .offcanvas-backdrop {
+    width: 100%;
+    height: 100%;
+  }
+  .backToHome {
+    margin-left: 2px;
+  }
+  /* -------------------- */
+  /* Phan body */
+  .container-1 {
+    margin-bottom: clamp(213px, 234px, 329px);
+
+  }
+  .container-1 img {
+    width: 60px;
+    height: auto;
+  }
+  .container-1 p {
+    text-align: center;
+    font-size: 12px;
+  }
+  .chartjs-render-monitor {
+    margin-top: 10px;
+  }
+  .container-1,.container-2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-container {
+    margin-left: -50px;
+  }
+  .profile-info {
+    width: 104%;
+  }
+  .hide-index-smartphone {
+    display: none;
+   }
+
+  
+  }
+  /* smartphone & tablet < 748px */
+  @media only screen and (max-width: 47.9375em)  {
+    .filter-section ,
+    .name-employee p,
+    .position-employee ,
+    .bell-notification {
+      display: none;
+    }
+    .detail-info span,
+    .hide-index-tablet,
+    .hide-index-mobile {
+      display:none;
+    }
+    .filter-option {
+      margin:10px;
+      margin-left: 20px;
+    }
+    .hide-text {
+     display:-webkit-box;
+     -webkit-line-clamp: 2;
+     -webkit-box-orient: vertical;
+     overflow: hidden;
+     text-overflow: ellipsis;
+    }
+  }
+  
+    /* Mobile : width < 768px */
+    @media only screen and (max-width: 47.9375em)  {
+     /* Phan header */
+      .header {
+        width: 81%;
+       }
+      
+      .header-left-title {
+        font-size: 25px;
+      }
+      
+      .header-middle-section {
+        margin-left:-10px;
+        
+      }
+      /* ------------------- */
+      /* Phan body */
+  
+    .container-bar-operation {
+      margin-left: 15px;
+    }
+
+  
+     .fa-circle-info  {
+     font-size: 20px;
+     }
+  
+  
+  }
+    /* Tablet: width >= 740px and width <1024px */
+    @media only screen and (min-width: 46.25em) and (max-width:63.9375em ) {
+      /* Phan header */
+     .header {
+      width: 100%;
+     }
+     .header-left-section {
+      width:25%;
+    }
+  .header-left-title {
+    transition: 1s;
+    font-size: 35px;
+  }
+  .header-right-section {
+    margin-right: 65px;
+  }
+  .name-employee p {
+    font-size: 16px;
+  }
+  
+  .header-middle-section {
+      margin-left:-33px;
+    }
+    .offcanvas.offcanvas-start,.offcanvas-backdrop {
+      display: none;
+        }
+  /* Phan body */
+
+    .container-1,.container-2 {
+      width: 80%;
+      height: auto;
+      position: relative;
+      left: 107px;
+      margin-top: 84px;
+    }
+.container-2 {
+  margin-top: 3px;
+}
+    .detail-info span,
+    .hide-index-tablet, 
+    .filter-option {
+      display:none;
+    }
+
+    .filter-section {
+      display:flex;
+      flex-direction: row;
+      font-size: 12px;
+      width: 102%;
+    
+    }
+    .profile-info {
+      width: 300px;
+  }
+  .profile-info p {
+    font-size: 13px;
+  }
+     .container-bar-operation {
+      margin-left: 15px;
+    }
+  } 
+    /* PC : width >= 1024px */
+    @media only screen and (min-width: 64em) {
+      /* Phan Header */
+     .header-middle-section {
+      margin-right: 60px;
+     }
+     .header-left-section {
+      width: 157px;
+     }
+      .header-left-title {
+        transition: 1s;
+      }
+      .index-menu {
+        display: none;
+      }
+      /* ------------ */
+      /* Phan Body */
+      .filter-option {
+        display:none;
+      }
+     .statistic-table {
+      max-width: 100%;
+      font-size: 13px;
+     }
+     .fa-circle-info {
+      display: none;
+     }
+     .offcanvas.offcanvas-start,.offcanvas-backdrop {
+   display: none;
+     }
+    
+     .filter-section {
+      font-size: 15px;
+     }
+     
+    }

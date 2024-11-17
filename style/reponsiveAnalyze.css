@@ -1,0 +1,306 @@
+/* -----------------Phan reponsive--------------- */
+
+/* Smartphones (min >= 320px) (max <480px) ----------- */
+@media only screen and (min-device-width: 20em) and (max-device-width: 29.9375em) {
+  /* Phan header */
+  .header {
+    width: 109%;
+    border-right: 10px;
+    justify-content: end;
+    z-index: 1;
+    left: 2px;
+    
+   }
+   .header-right-section {
+    margin-right: 32px;
+    position: relative;
+    left: clamp(-48px, -17px, -19px);
+    top: 15px;
+
+  }
+  .header-left-section {
+    position: relative;
+    left:clamp(36px, 74px, 100px);
+    top: 31px;
+ 
+  }
+  .header-middle-section {
+    width: 35%;
+    height: auto;
+    position: relative;
+    right:clamp(58px, 59px, 104px);
+    bottom: 12px;
+
+  }
+  .logo-store {
+    width: 140px;
+    height :auto;
+  }
+  .header-left-title {
+    font-size: 25px;
+    width: 113px;
+  }
+  .offcanvas-backdrop ,.offcanvas.hiding, .offcanvas.show, .offcanvas.showing {
+    max-width: 100%;
+  }
+  .offcanvas-backdrop.fade.show  {
+    z-index: 0;
+    width: 100%;
+    height: 113vh;
+
+  }
+  .offcanvas.offcanvas-end.show{
+    z-index: 2;
+  }
+
+    .avatar {
+      width: 58px;
+      height: auto;
+     }  
+     .offcanvas.offcanvas-start {
+      background-color: #35635A;
+      max-width: 25%;
+     }
+     .offcanvas-header{ 
+      display: flex;
+      flex-direction: row;
+     }
+     .index-menu {
+      height: 98px;
+      position: fixed;
+      right: 0;
+      left: 5px;
+      top: 45px;
+      width: 75px;
+      z-index: 1;
+     }
+     .fa-bars {
+      font-size: 50px;
+      position: relative;
+     
+     }
+  /* ------------------- */
+  /* Phan sidebar */
+  .side-bar {
+    display:none;
+  }
+  .container-function-selection{
+    margin-left: 0px;
+  }
+  .offcanvas-body {
+    margin-left: -2px;
+  }
+  .offcanvas,.offcanvas-end.show {
+    z-index: 11;
+  }
+  /* -------------------- */
+  /* Phan body */
+  body {
+    width: 110%;
+  }
+  .container-search {
+    margin-left: 15px;
+  }
+  
+  .container-bar-operation {
+  margin-left: 15px;
+  }
+  .main-content {
+    margin-top:-46px;
+  }
+  .container-analyze {
+    position: relative;
+    left: clamp(80px, 104px, 103px);
+    width: 63%;
+  }
+
+   .smartphone-discount {
+    width: 30%;
+   }
+   .fa-circle-info  {
+   font-size: 20px;
+   }
+  .main-container {
+    margin-left: -282px;
+    width: 180%;
+  }
+
+  .hide-index-smartphone {
+    display: none;
+       }
+ 
+
+  }
+  /* smartphone & tablet < 748px */
+  @media only screen and (max-width: 47.9375em)  {
+    .filter-section ,
+    .name-employee p,
+    .position-employee ,
+    .bell-notification {
+      display: none;
+    }
+    .detail-info span,
+    .hide-index-tablet,
+    .hide-index-mobile {
+      display:none;
+    }
+    .filter-option {
+      margin: 5px;
+      margin-left: 35px;
+      margin-bottom: -18px;
+  }
+  .hide-text {
+    display:-webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   }
+}
+    /* Mobile : width < 768px */
+    @media only screen and (max-width: 47.9375em)  {
+     /* Phan header */
+      
+      .header-left-title {
+        font-size: 25px;
+      }
+      .header-left-section {
+        margin-left: 33px;
+        width: 105px;
+      }
+      .header-middle-section {
+        margin-left:10px;
+      }
+      /* ------------------- */
+      /* Phan body */
+      .container-search {
+        margin-left: 15px;
+      }
+  
+    .container-bar-operation {
+      margin-left: 15px;
+    }
+  
+    .statistic-table {
+      max-width: 100%;
+      font-size: 14px;
+      margin-left: 9px;
+     }
+  
+     .fa-circle-info  {
+     font-size: 20px;
+     }
+     .container-bar-operation {
+      margin-left: 32px;
+     }
+     .hide-text-2 {
+      display:-webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+     }
+  
+  }
+    /* Tablet: width >= 740px and width <1024px */
+    @media only screen and (min-width: 46.25em) and (max-width:63.9375em ) {
+      /* Phan header */
+     .header {
+      width: 100%;
+     }
+     .header-left-section {
+      width:25%;
+    }
+  .header-left-title {
+    transition: 1s;
+    font-size: 35px;
+  }
+  .header-right-section {
+    margin-right: 25px;
+  }
+  .name-employee p {
+    font-size: 16px;
+  }
+  
+  .header-middle-section {
+      margin-left:-33px;
+    }
+    .offcanvas.offcanvas-start,.offcanvas-backdrop {
+      display: none;
+        }
+  /* Phan body */
+
+    .main-content {
+        width: 30%;
+       }
+    .detail-info span,
+    .hide-index-tablet, 
+    .filter-option {
+      display:none;
+    }
+    .filter-section {
+      display:flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 10px;
+    
+    }
+    .statistic-section {
+      width: 590px;
+    }
+    .statistic-table {
+      max-width: 100%;
+      font-size: 14px;
+      margin-left: 8px;
+     }
+  
+     .fa-circle-info  {
+     font-size: 20px;
+     }
+    .container-analyze {
+      position: relative;
+      left:45px;
+    }
+     .container-bar-operation {
+      margin-left: 15px;
+    }
+    .chartjs-render-monitor{
+      height: auto;
+    width: 101%;
+    }
+  } 
+    /* PC : width >= 1024px */
+    @media only screen and (min-width: 64em) {
+      /* Phan Header */
+      .header-middle-section{
+        margin-left: 10px;
+      }
+      .header-left-section {
+        width: 147px;
+      }
+      .header-left-title {
+        transition: 1s;
+      }
+      /* ------------ */
+      .index-menu {
+        display: none;
+      }
+      /* Phan Body */
+     .statistic-table {
+      width: 90%;
+      font-size: 14px;
+      margin-left: 8px;
+     }
+      .filter-option,
+     .fa-circle-info {
+      display: none;
+     }
+     .offcanvas.offcanvas-start,.offcanvas-backdrop {
+   display: none;
+     }
+     .container-analyze {
+      position: relative;
+      left:58px
+     }
+    }
+    

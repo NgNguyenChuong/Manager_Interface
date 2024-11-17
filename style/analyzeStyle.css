@@ -1,18 +1,10 @@
-/* Global Styles */
-body {
-  font-family: Arial, sans-serif;
-
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-}
 
 .container-analyze {
   width: 100%;
   padding: 30px;
- margin: 150px;
- margin-top: 80px;
+  margin: 140px;
+  margin-top: 80px;
+  margin-right: 28px;
 }
 
 h1 {
@@ -46,39 +38,15 @@ label {
   background-color: #45a049;
 } 
 
-/* .statistic-section h2 {
-  font-size: 20px;
-  margin-bottom: 15px;
-  color: #333;
-  border-bottom: 2px solid #4CAF50;
-  padding-bottom: 5px;
-} */
-
-/* 
-.statistic-item {
+.main-container {
   display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
-} */
-/* 
-.statistic-column {
-  flex: 1;
-  text-align: center;
-  color: #333;
-} */
+  height: calc(300vh - 100px);
+  overflow: hidden;
+  margin-left: -155px;
+  width: 116%;
 
-/* .statistic-column a {
-  color: #2196F3;
-  text-decoration: none;
 }
-
-.statistic-column a:hover {
-  text-decoration: underline;
-}
-
-/* Global Styles */
-body, html {
+body{
   margin: 0;
   padding: 0;
   width: 100%;
@@ -103,14 +71,6 @@ h1 {
   color: #333;
   margin-bottom: 30px;
 }
-
-/* 
-.filter-section {
-  display: flex;
-  flex-direction: row;
-  align-items:center;  
-  margin-bottom: 30px;
-} */
 
 label {
   font-weight: bold;
@@ -143,50 +103,7 @@ label {
   border-bottom: 2px solid #4CAF50;
   padding-bottom: 5px;
 }
-
-/* 
-.statistic-item,.statistic-item-2 {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
-}
-.statistic-item-2 {
-  border-top: 1px solid #ddd;
-  border:  1px solid #ddd;
-  
- 
-} */
-
-/* .statistic-column, .statistic-column-2 {
-  flex: 1;
-  text-align: center;
-  color: #333;
- padding: 10px; 
-
-} */
-/* .statistic-column:last-child { 
-  border-right: none; 
-}
-.statistic-column-2 {
-  font-weight: bold;
-}
-
-.statistic-column a {
-  color: #2196F3;
-  text-decoration: none;
-} */
-/* 
-.statistic-column a:hover {
-  text-decoration: underline;
-} */
-/* 
-.summary, .best-seller, .slow-seller {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #333;
-} */
-.statistic-table {
+.statistic-table,.statistic-table-2 {
   width: 100%;
   border-collapse: collapse;
 }
@@ -202,7 +119,10 @@ label {
   background-color: #f2f2f2;
 }
 .statistic-table img {
-  width: 150px;
+  width: 130px;
  
-
+}
+.detail-info {
+  color: #c12f2f;
+  text-decoration: none;
 }
