@@ -60,10 +60,13 @@
     display: inline-block;
     position: relative;
     height: auto;
-    top:48px;
+    top:47px;
     left:4px;
     background-color: white;
     width: 84px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(176, 176, 176);
    }
 /* ------------------- */
 /* Phan sidebar */
@@ -76,9 +79,9 @@
 .offcanvas-body {
   margin-left: -2px;
 }
-.backToHome {
+/* .backToHome {
   margin-left: 2px;
-}
+} */
 /* -------------------- */
 /* Phan body */
 .container-search {
@@ -242,6 +245,9 @@ margin-left: 15px;
     .header-left-title {
       transition: 1s;
     }
+    .offcanvas.offcanvas-start,.offcanvas-backdrop {
+      display: none;
+        }
     /* ------------ */
     /* Phan Body */
     .filter-option {
@@ -254,9 +260,7 @@ margin-left: 15px;
    .fa-circle-info {
     display: none;
    }
-   .offcanvas.offcanvas-start,.offcanvas-backdrop {
- display: none;
-   }
+
    .filter-section {
     font-size: 15px;
    }

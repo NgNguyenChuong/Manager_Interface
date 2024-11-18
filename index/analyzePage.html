@@ -32,7 +32,7 @@
   <script src="./asset/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body style="height: 100%">
+<body style="height: 900px">
 
   <div class="header">
     <div class="header-left-section">
@@ -132,16 +132,18 @@
               <p>Kho hàng</p>
             </div>
           </a>
-          <div class="container-function-selection">
-            <button class="button-function-selection">
-              <i class="fa-solid fa-users" style="
+          <a href="" style="text-decoration: none; color: black;">
+            <div class="container-function-selection">
+              <button class="button-function-selection">
+                <i class="fa-solid fa-users" style="
                               font-size: 20px;
                               color: #FAD4AE;
                           "></i>
-            </button>
-            <p style="color: black;text-align: center; font-size: 10x;">Khách hàng</p>
-          </div>
-          <a href="/index/mainOrderPage.html" style="text-decoration: none; color: black;">
+              </button>
+              <p style="color: black;text-align: center; font-size: 10x;">Khách hàng</p>
+            </div>
+          </a>
+          <a href="orderPage.html" style="text-decoration: none; color: black;">
             <div class="container-function-selection">
               <button class="button-function-selection">
                 <i class="fa-solid fa-list-check" style="
@@ -164,16 +166,16 @@
             </div>
           </a>
           <a href="accountPage.html" style="text-decoration: none; color: black;">
-          <div class="container-function-selection">
-            <button class="button-function-selection">
-              <i class="fa-solid fa-circle-user" style="
+            <div class="container-function-selection">
+              <button class="button-function-selection">
+                <i class="fa-solid fa-circle-user" style="
                            font-size: 20px;
                            color: #FAD4AE;
                        "></i>
-            </button>
-            <p style="color:black">Tài khoản</p>
-          </div>
-        </a>
+              </button>
+              <p style="color:black">Tài khoản</p>
+            </div>
+          </a>
         </div>
 
       </div>
@@ -181,8 +183,8 @@
   </div>
 
   <div class="main-container">
-    <div class="side-bar ">
-      <div class="container-function-selection">
+    <div class="side-bar" style="width: 62px;">
+      <div class="backToHome" style="position: relative; margin-top: 35px; left:-2px">
         <a href="homePage.html" style="text-decoration: none; color: black;">
           <div class="backToHome">
             <button class="button-function-selection">
@@ -194,15 +196,17 @@
             <p>Trang chủ</p>
           </div>
         </a>
-        <a href="wareHouse.html" style="text-decoration: none; color: black;">
-          <div class="container-function-selection">
-            <button class="button-function-selection">
-              <i class="fa-solid fa-warehouse" style="font-size: 20px;
+      </div>
+      <a href="wareHouse.html" style="text-decoration: none; color: black;">
+        <div class="container-function-selection">
+          <button class="button-function-selection">
+            <i class="fa-solid fa-warehouse" style="font-size: 20px;
             color: #FAD4AE;
         "></i></button>
-            <p>Kho hàng</p>
-          </div>
-        </a>
+          <p>Kho hàng</p>
+        </div>
+      </a>
+      <a href="" style="text-decoration: none; color: black;">
         <div class="container-function-selection">
           <button class="button-function-selection">
             <i class="fa-solid fa-users" style="
@@ -212,17 +216,19 @@
           </button>
           <p>Khách hàng</p>
         </div>
-        <a href="mainOrderPage.html" style="text-decoration: none; color: black;">
-          <div class="container-function-selection">
-            <button class="button-function-selection">
-              <i class="fa-solid fa-list-check" style="
+      </a>
+      <a href="orderPage.html" style="text-decoration: none; color: black;">
+        <div class="container-function-selection">
+          <button class="button-function-selection">
+            <i class="fa-solid fa-list-check" style="
                     font-size: 20px;
                     color: #FAD4AE;
                     "></i>
-            </button>
-            <p>Đơn hàng</p>
-          </div>
-        </a>
+          </button>
+          <p>Đơn hàng</p>
+        </div>
+      </a>
+      <a href="analyzePage.html" style="text-decoration: none; color: black;">
         <div class="container-function-selection">
           <button class="button-function-selection" style="background-color: #6aa173;">
             <i class="fa-solid fa-chart-simple" style="
@@ -232,18 +238,18 @@
           </button>
           <p>Thống kê</p>
         </div>
-        <a href="./accountPage.html" style="text-decoration: none; color: black;">
-          <div class="container-function-selection">
-            <button class="button-function-selection">
-              <i class="fa-solid fa-circle-user" style="
+      </a>
+      <a href="accountPage.html" style="text-decoration: none; color: black;">
+        <div class="container-function-selection">
+          <button class="button-function-selection">
+            <i class="fa-solid fa-circle-user" style="
                      font-size: 20px;
                      color: #FAD4AE;
                  "></i>
-            </button>
-            <p>Tài khoản</p>
-          </div>
-        </a>
-      </div>
+          </button>
+          <p>Tài khoản</p>
+        </div>
+      </a>
     </div>
     <!-- Phần Body -->
     <div class="container-analyze content">
@@ -262,7 +268,7 @@
           </i></button>
         <ul class="dropdown-menu">
           <li>
-            <label for="filter-select" style="margin:auto" >Thống kê</label>
+            <label for="filter-select" style="margin:auto">Thống kê</label>
             <select name="filter-select" id="filter-select" style="width: 45%;">
               <option value>Tất cả</option>
               <option value>Doanh số</option>
@@ -273,7 +279,7 @@
           </li> <br>
           <li>
             <label for="filter-select">
-              <p style="margin:auto" >Loại sản phẩm</p>
+              <p style="margin:auto">Loại sản phẩm</p>
             </label>
             <select name="filter-select" id="filter-select" style="width: 45%;">
               <option value="All">Tất cả</option>
@@ -285,14 +291,14 @@
           </li><br>
           <li>
             <label for="date-from">
-              <p style="margin:auto" >Từ ngày:</p>
+              <p style="margin:auto">Từ ngày:</p>
             </label>
             <input type="date" id="date-from">
-  
+
           </li> <br>
           <li>
             <label for="date-to">
-              <p style="margin:auto" >Đến ngày:</p>
+              <p style="margin:auto">Đến ngày:</p>
             </label>
             <input type="date" id="date-to">
           </li>

@@ -14,7 +14,7 @@
    .header-right-section {
     margin-right: 32px;
     position: relative;
-    left: clamp(-48px, -17px, -19px);
+    left: clamp(-48px, -54px, -19px);
     top: 15px;
 
   }
@@ -207,6 +207,7 @@
       /* Phan header */
      .header {
       width: 100%;
+      left: 62px;
      }
      .header-left-section {
       width:25%;
@@ -217,7 +218,7 @@
   }
   .header-right-section {
     width: 41%;
-    margin-right: 64px;
+    margin-right: -40px;
   }
   .header-right-section img {
     width: 55px;

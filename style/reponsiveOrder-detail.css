@@ -67,10 +67,13 @@
       display: inline-block;
       position: absolute;
       height: 98px;
-      /* top: 0px; */
+      top: 0px;
       left: -73px;
       background-color: white;
       width: 115px;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(176, 176, 176);
      }
   /* ------------------- */
   /* Phan sidebar */
@@ -185,6 +188,7 @@
       /* Phan header */
      .header {
       width: 100%;
+      left: 65px;
      }
      .header-left-section {
       width:25%;
@@ -226,8 +230,8 @@
     }
   
     .container-order-detail-2 {
-      margin-left: 60px;
-    width: 89%;
+      margin-left: 75px;
+      width: 85%;
     }
   } 
     /* PC : width >= 1024px */
