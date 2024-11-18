@@ -72,6 +72,10 @@
       left: 3px;
       background-color: white;
       width: 109px;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(176, 176, 176);
+
      }
   /* ------------------- */
   /* Phan sidebar */
@@ -93,6 +97,11 @@
   }
   /* -------------------- */
   /* Phan body */
+  body {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    width: 100%;
+}
   .container-1 {
     margin-bottom: clamp(213px, 234px, 329px);
 

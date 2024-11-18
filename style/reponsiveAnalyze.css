@@ -14,7 +14,7 @@
    .header-right-section {
     margin-right: 32px;
     position: relative;
-    left: clamp(-48px, -54px, -19px);
+    left: clamp(-48px, -26px, -19px);
     top: 15px;
 
   }
@@ -66,13 +66,14 @@
       flex-direction: row;
      }
      .index-menu {
-      height: 98px;
+      height: auto;
       position: fixed;
       right: 0;
       left: 5px;
-      top: 45px;
+      top: 47px;
       width: 75px;
       z-index: 1;
+    
      }
      .fa-bars {
       font-size: 50px;
@@ -96,7 +97,7 @@
   /* -------------------- */
   /* Phan body */
   body {
-    width: 110%;
+    width: 100%;
   }
   .container-search {
     margin-left: 15px;
