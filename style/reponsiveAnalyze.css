@@ -131,7 +131,7 @@
  
 
   }
-  /* smartphone & tablet < 748px */
+  /* smartphone & mobile < 748px */
   @media only screen and (max-width: 47.9375em)  {
     .filter-section ,
     .name-employee p,
@@ -216,7 +216,13 @@
     font-size: 35px;
   }
   .header-right-section {
-    margin-right: 25px;
+    width: 41%;
+    margin-right: 64px;
+  }
+  .header-right-section img {
+    width: 55px;
+    height: auto;
+
   }
   .name-employee p {
     font-size: 16px;
@@ -276,7 +282,7 @@
         margin-left: 10px;
       }
       .header-left-section {
-        width: 147px;
+        width: 150px;
       }
       .header-left-title {
         transition: 1s;
