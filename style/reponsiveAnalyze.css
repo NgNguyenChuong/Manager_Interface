@@ -4,7 +4,7 @@
 @media only screen and (min-device-width: 20em) and (max-device-width: 29.9375em) {
   /* ------------------- */
   .header {
-
+    left: 59px;
     margin-left: -63px;
   }
 .index-menu {
@@ -41,6 +41,7 @@
   top: 15px;
   z-index: 1;
 }
+
   /* Phan sidebar */
   .side-bar {
     display:none;
@@ -52,7 +53,7 @@
     margin-left: -2px;
   }
   .offcanvas,.offcanvas-end.show {
-    z-index: 11;
+    z-index: 10000;
   }
   /* -------------------- */
   /* Phan body */
@@ -168,7 +169,7 @@
       /* Phan header */
      .header {
       width: 100%;
-      left: 62px;
+      left: 70px;
      }
      .header-left-section {
       width:25%;
@@ -179,7 +180,7 @@
   }
   .header-right-section {
     width: 41%;
-    margin-right: -40px;
+    margin-right: 17px;
   }
   .header-right-section img {
     width: 55px;
@@ -195,6 +196,9 @@
     }
     .offcanvas.offcanvas-start,.offcanvas-backdrop {
       display: none;
+        }
+        .index-menu {
+          display:none;
         }
   /* Phan body */
 
