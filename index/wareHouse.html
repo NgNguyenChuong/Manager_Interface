@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quản lý bán hàng</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        
+        <link href="../style/main_warehouse.css" rel="stylesheet">
+        <link rel="stylesheet" href="../style/header.css">
+        <link rel="stylesheet" href="../style/sidebar.css">
+        <link href="../icon/css/all.css" rel="stylesheet">
+        <link href="../style/generall.css" rel="stylesheet">
+        <link href="../style/main.css" rel="stylesheet">
+
+        <link href="../style/LogInfo.css" rel="stylesheet">
+  <!-- Add bootstrap -->
+  <link href="/index/asset/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Add reponsive -->
+  <link rel="stylesheet" href="/style/reponsiveOrder.css">
+        
+
+    </head>
+    <body style="height: 10000px;">
+        <div class="header">
+            <div class="header-left-section">
+              <p class="header-left-title"></p>
+            </div>
+            <div class="header-middle-section">
+              <img class="logo-store" src="../image/logo.webp">
+            </div>
+            <div class="header-right-section">
+              <div class="bell-notification">
+                <i class="fa-regular fa-bell" style="
+                                color: #64792c;
+                                font-size: 45px;
+                                width:100%;
+                                "></i>
+              </div>
+              <div>
+                <div class="position-employee">
+                  <p>Staff</p>
+                </div>
+                <div class="name-employee">
+                  <p>Nguyen Chuong</p>
+                </div>
+              </div>
+              <div>
+                <img class="avatar" class src="/image/chuong-avatar.jpg" alt="" data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+              </div>
+              <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div style=" 
+                    border-bottom-width: 1px;
+                    border-bottom-style: solid;
+                    border-bottom-color: rgb(176, 176, 176);" class="offcanvas-header">
+                  <img class="avatar" class src="/image/chuong-avatar.jpg" alt="">
+                  <div style="display: flex; flex-direction: column; height: 95px;">
+                    <h4 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">NgNguyenChuong</h4>
+                    <h5>Ng_Nguyen_Chuong</h5>
+                  </div>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <a href="" class="navbar_user">
+                    <i class="fa-solid fa-user"></i>
+                    <p>Thông tin cá nhân </p>
+                  </a>
+                  <a href="#logoutModal" class="navbar_logout">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <p>Đăng xuất</p>
+                  </a>
+                  <div id="logoutModal" class="modal">
+                    <div class="modal_content">
+                      <h2>Xác nhận đăng xuất</h2>
+                      <p>Bạn có chắc chắn muốn đăng xuất không?</p>
+                      <div class="modal_actions">
+                        <a href="/logout" class="btn_2 confirm">Đăng xuất</a>
+                        <a href="#" class="btn_2 cancel">Hủy</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+          <div class="index-menu">
+            <i class="fa-solid fa-bars" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+              aria-controls="offcanvasExample">
+            </i>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+              <div style=" 
+              border-bottom-width: 1px;
+              border-bottom-style: solid;
+              border-bottom-color: rgb(176, 176, 176);" class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Mục lục</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <a href="" style="text-decoration: none; color: black;">
+                  <div class="container-function-selection">
+                    <button class="button-function-selection">
+                      <i class="fa-solid fa-house" style="
+                        font-size: 20px;
+                        color: #FAD4AE;
+                        "></i>
+                    </button>
+                    <p>Trang chủ</p>
+                  </div>
+                </a>
+                <a href="" style="text-decoration: none; color: black;">
+                  <div class="container-function-selection">
+                    <button class="button-function-selection">
+                      <i class="fa-solid fa-warehouse" style="font-size: 20px;
+                        color: #FAD4AE;
+                    "></i></button>
+                    <p>Kho hàng</p>
+                  </div>
+                </a>
+                <a href="" style="text-decoration: none; color: black;">
+                  <div class="container-function-selection">
+                    <button class="button-function-selection">
+                      <i class="fa-solid fa-users" style="
+                                    font-size: 20px;
+                                    color: #FAD4AE;
+                                "></i>
+                    </button>
+                    <p style="color: black;text-align: center; font-size: 10x;">Khách hàng</p>
+                  </div>
+                </a>
+                <a href="orderPage.html" style="text-decoration: none; color: black;">
+                  <div class="container-function-selection">
+                    <button class="button-function-selection" style="background-color: #6aa173; color: black;">
+                      <i class="fa-solid fa-list-check" style="
+                                font-size: 18px;
+                                color: #FAD4AE;
+                                "></i>
+                    </button>
+                    <p style="color:black">Đơn hàng</p>
+                  </div>
+                </a>
+                <a href="analyzePage.html" style="text-decoration: none; color: black;">
+                  <div class="container-function-selection">
+                    <button class="button-function-selection">
+                      <i class="fa-solid fa-chart-simple" style="
+                                font-size: 20px;
+                                color: #FAD4AE;
+                            "></i>
+                    </button>
+                    <p>Thống kê</p>
+                  </div>
+                </a>
+                <a href="accountPage.html" style="text-decoration: none; color: black;">
+                  <div class="container-function-selection">
+                    <button class="button-function-selection">
+                      <i class="fa-solid fa-circle-user" style="
+                                 font-size: 20px;
+                                 color: #FAD4AE;
+                             "></i>
+                    </button>
+                    <p style="color:black">Tài khoản</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+        
+          </div>
+        <div class="side-bar">
+            <div class="backToHome">
+              <a href="homePage.html" style="text-decoration: none; color: black;">
+                <div class="container-function-selection">
+                  <button class="button-function-selection" style="margin-top: 35px;">
+                    <i class="fa-solid fa-house" style="
+                    font-size: 20px;
+                    color: #FAD4AE;
+                    "></i>
+                  </button>
+                  <p>Trang chủ</p>
+                </div>
+              </a>
+            </div>
+            <a href="wareHouse.html" style="text-decoration: none; color: black;">
+              <div class="container-function-selection">
+                <button class="button-function-selection">
+                  <i class="fa-solid fa-warehouse" style="font-size: 20px;
+                  color: #FAD4AE;
+              "></i></button>
+                <p>Kho hàng</p>
+              </div>
+            </a>
+            <a href="" style="text-decoration: none; color: black;">
+            <div class="container-function-selection">
+              <button class="button-function-selection">
+                <i class="fa-solid fa-users" style="
+                              font-size: 20px;
+                              color: #FAD4AE;
+                          "></i>
+              </button>
+              <p>Khách hàng</p>
+            </div>
+            </a>
+            <a href="orderPage.html" style="text-decoration: none; color: black;">
+              <div class="container-function-selection">
+                <button class="button-function-selection" style="background-color: #6aa173;">
+                  <i class="fa-solid fa-list-check" style="
+                          font-size: 20px;
+                          color: #FAD4AE;
+                          "></i>
+                </button>
+                <p>Đơn hàng</p>
+              </div>
+            </a>
+            <a href="analyzePage.html" style="text-decoration: none; color: black;">
+              <div class="container-function-selection">
+                <button class="button-function-selection">
+                  <i class="fa-solid fa-chart-simple" style="
+                          font-size: 20px;
+                          color: #FAD4AE;
+                      "></i>
+                </button>
+                <p>Thống kê</p>
+              </div>
+            </a>
+            <a href="accountPage.html" style="text-decoration: none; color: black;">
+              <div class="container-function-selection">
+                <button class="button-function-selection">
+                  <i class="fa-solid fa-circle-user" style="
+                           font-size: 20px;
+                           color: #FAD4AE;
+                       "></i>
+                </button>
+                <p>Tài khoản</p>
+              </div>
+            </a>
+          </div>
+
+
+        
+
+        <div class="container-main-warehouse">
+            <div class="container-search">
+                <input class="search-bar" type="text"
+                 placeholder="Tìm kiếm sản phẩm">
+                 <button class="search-icon-warehouse">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="container-roll-his">
+                <div class="container-roll-bar-operation">
+                    <div class="container-bar-operation">
+                        <p style="
+                            font-size: 30px;
+                            font-weight:700;
+                        
+                        ">Quản lý kho</p>
+                        <div class="container-add-product">
+                            <button class="button-add">Add</button>
+                            <div class="active-add-container"> 
+                                
+                                <button class="button-add-product-active" style="
+                                    margin-left: 40px;   
+                                ">Thêm ảnh</button>
+                                <input type="file" name="" id="" class="input-add-product" style="width: 50%;" placeholder="Thêm ảnh">
+                                <input class="input-add-product" type="text" placeholder="Thêm tên">
+                                <input class="input-add-product" type="text" placeholder="Mô tả">
+                                <input class="input-add-product" type="text" placeholder="Xuất xứ">
+                                <input class="input-add-product" type="text" placeholder="Thành phần">
+                                <input class="input-add-product" type="text" placeholder="Khối lượng tịnh">
+                                <input class="input-add-product" type="text" placeholder="Hạn sử dụng">
+                                <input class="input-add-product" type="text" placeholder="Gợi ý sử dụng">
+                                <input class="input-add-product" type="text" placeholder="Hướng dẫn bảo quản">
+                                <div class="container-button-add-product-active">
+                                    <button onclick="confirmAddProduct()" class="button-add-product-active">Thêm</button>
+                                    <button onclick="confirmNotAddProduct()" class="button-add-product-active" style="
+                                        background-color:  #D95E5E;
+                                    ">Xoá</button>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-main-product">
+                        <div class="overview-product">
+                            <div>
+                                <img class="avatar" src="../image/product1.webp" style="margin-top: 0; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%;">
+                            </div>
+                            <div class="info-overview-order-product">
+                                <p style="
+                                    margin-bottom: 15px;   
+                                    ">Bắp cải hữu cơ</p>
+                                <p>Ngày hết hạn: 00/00/2000</p>
+                                <p>Kho: 34</p>
+                                
+                            </div>
+                            <div class="handle-product">
+                                <button class="button-handle-product">xu ly</button>
+                                <div class="active-handle-contain">
+                                    <button onclick="confirmDeleteAction()" class="button-delete">Xoa san pham</button>
+                                    <button class="button-update">Chinh sua</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overview-product">
+                            <div>
+                                <img class="avatar" src="../image/product1.webp" style="margin-top: 0; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%;">
+                            </div>
+                            <div class="info-overview-order-product">
+                                <p style="
+                                    margin-bottom: 15px;   
+                                    ">Bắp cải hữu cơ</p>
+                                <p>Ngày hết hạn: 00/00/2000</p>
+                                <p>Kho: 34</p>
+                                
+                            </div>
+                            <div class="handle-product">
+                                <button class="button-handle-product">xu ly</button>
+                                <div class="active-handle-contain">
+                                    <button onclick="confirmDeleteAction()" class="button-delete">Xoa san pham</button>
+                                    <button class="button-update">Chinh sua</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overview-product">
+                            <div class="product-picture">
+                                <img class="avatar" src="../image/product1.webp" style="margin-top: 0; margin-left: 10px; width: 100px; height: 100px; border-radius: 50%;">
+                            </div>
+                            <div class="info-overview-order-product">
+                                <p style="
+                                    margin-bottom: 15px;   
+                                    ">Bắp cải hữu cơ</p>
+                                <p>Ngày hết hạn: 00/00/2000</p>
+                                <p>Kho: 34</p>
+                            </div>
+                            <div class="handle-product">
+                                <button class="button-handle-product">xu ly</button>
+                                <div class="active-handle-contain">
+                                    <button onclick="confirmDeleteAction()" class="button-delete">Xoa san pham</button>
+                                    <button class="button-update">Chinh sua</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="history"><p>Lịch sử</p></div>
+            </div>
+        </div>
+        <script>
+            function confirmAddProduct() {
+                let confirmAction = confirm("Bạn có chắc chắn muốn thêm sản phẩm này không?");
+                if (confirmAction) {
+                    // Thực hiện hành động khi người dùng nhấn "OK"
+                    alert("Yêu cầu đã được thực hiện.");
+                } else {
+                    // Hành động khi người dùng nhấn "Cancel"
+                    alert("Yêu cầu đã bị hủy.");
+                }
+            }
+            function confirmNotAddProduct() {
+                let confirmAction = confirm("Bạn có chắc chắn không muốn thêm sản phẩm này không?");
+                if (confirmAction) {
+                    // Thực hiện hành động khi người dùng nhấn "OK"
+                    alert("Yêu cầu đã được thực hiện.");
+                } else {
+                    // Hành động khi người dùng nhấn "Cancel"
+                    alert("Yêu cầu đã bị hủy.");
+                }
+            }
+            function confirmDeleteAction() {
+                let confirmAction = confirm("Bạn có chắc chắn muốn xoá sản phẩm này không?");
+                if (confirmAction) {
+                    // Thực hiện hành động khi người dùng nhấn "OK"
+                    alert("Yêu cầu đã được thực hiện.");
+                } else {
+                    // Hành động khi người dùng nhấn "Cancel"
+                    alert("Yêu cầu đã bị hủy.");
+                }
+            }
+        </script>
+        <script src="./asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

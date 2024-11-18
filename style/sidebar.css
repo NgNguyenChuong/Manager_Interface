@@ -9,6 +9,7 @@
     width: 70px;
     text-align: center;
     z-index: 99;
+    align-items: center;
 }
 
 .button-function-selection {
@@ -31,6 +32,7 @@
     cursor: pointer;
     font-weight: bold;
     font-size: 10px;
+    position: relative; margin-top: -22px; left:0;
 }
 
 .container-function-selection {
