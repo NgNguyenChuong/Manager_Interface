@@ -15,7 +15,7 @@
     position: relative;
     left: clamp(-14px, -4px, -4px);
     top: 15px;
-   
+   z-index: -1;
  
   }
   .header-left-section {
@@ -28,8 +28,9 @@
     width: 35%;
     height: auto;
     position: relative;
-    right: clamp(52px, 75px, 104px);
+    right: clamp(52px, 64px, 104px);
     bottom: 12px;
+    z-index: -1;
    
   }
   .logo-store {
@@ -123,7 +124,7 @@
 
   
   }
-  /* smartphone & tablet < 748px */
+  /* smartphone & mobile < 748px */
   @media only screen and (max-width: 47.9375em)  {
     .filter-section ,
     .name-employee p,
@@ -203,6 +204,9 @@
     }
     .offcanvas.offcanvas-start,.offcanvas-backdrop {
       display: none;
+        }
+        .index-menu {
+          display: none;
         }
   /* Phan body */
 

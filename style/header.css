@@ -12,16 +12,13 @@
     background-color: white;
 }
 .header-left-section {
-<<<<<<< HEAD
+
     margin-left: 20px;
     
-=======
-    font-weight: bold;
+    /* font-weight: bold;
     font-family:Arial;
     width: 500px;
-    margin-left:20px;
-
->>>>>>> fc40d87dd468695f88393abc1d067b4728e37166
+    margin-left:20px; */
 }
 .header-left-title {
     font-size: 35px;
@@ -47,9 +44,9 @@
 .avatar {
     
     width: 70px;
-    height: 70px; /* Đảm bảo avatar có kích thước vuông */
-    border-radius: 50%; /* Đảm bảo avatar có hình tròn */
-    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    height: 70px; 
+    border-radius: 50%; 
+    object-fit: cover; 
     margin-right: 10px;
     cursor: pointer;
 }
