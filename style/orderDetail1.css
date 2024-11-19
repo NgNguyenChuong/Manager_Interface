@@ -1,5 +1,4 @@
-
- body {
+body {
   font-family: Arial, sans-serif;
   background-color: #f7f8fc;
   margin: 0;
@@ -155,45 +154,164 @@ h2 {
 }
 
 .Button {
-  display :flex;
-  flex-direction: row;
-  align-items:center;
-  justify-content:center;
-  height:40px;
-  margin-top:20px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin: 30px auto;
+  max-width: 800px;
 }
-.btn_1{
+
+.top-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.back-button-edit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Base button styles */
+.btn1, .btn_1, .btn2 {
+  min-width: 200px;
   padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Delete button */
+.btn1 {
+  background-color: #dc3545;  /* Red color */
+  color: white;
+}
+
+.btn1:hover {
+  background-color: #c82333;
+}
+
+/* Back button */
+.btn_1 {
+  background-color: #6aa173;  /* Green color */
+  color: white;
+}
+
+.btn_1:hover {
+  background-color: #558b5d;
+}
+
+/* Edit button */
+.btn2 {
+  background-color: #ffa500;  /* Orange color */
+  color: white;
+}
+
+.btn2:hover {
+  background-color: #ff8c00;
+}
+
+/* Hide text class for responsive */
+.hide-on-mobile {
+  display: inline;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .top-buttons {
+    gap: 15px;
+  }
+
+  .btn1, .btn_1, .btn2 {
+    min-width: 150px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .top-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .btn1, .btn_1, .btn2 {
+    min-width: 200px;
+  }
+}
+
+/* Style for modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-confirm {
   background-color: #6aa173;
   color: white;
-  text-align: left;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-  margin-left: 15px;
 }
-.btn_1:hover {
-  background-color: #578b59;
+
+.modal-confirm:hover {
+  background-color: #558b5d;
 }
-.btn1 {
-  padding: 15px 30px;
-  cursor:pointer;
-  background-color: #ce2e2e;
+
+.modal-cancel {
+  background-color: #dc3545;
   color: white;
+}
+
+.modal-cancel:hover {
+  background-color: #c82333;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
   font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  border-width: 0;
-  transition: background-color 0.3s;
+  cursor: pointer;
 }
-.btn1:hover{
-  
-  background-color: #b41f1f;
-}
-.space {
-  margin-left: 5px;
-}
-.main-container {
-  width: 100%;
+
+.close:hover {
+  color: black;
 }

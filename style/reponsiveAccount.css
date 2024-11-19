@@ -3,23 +3,6 @@
 /* Smartphones (min >= 320px) (max <480px) ----------- */
 @media only screen and (min-device-width: 20em) and (max-device-width: 29.9375em) {
   /* Phan header */
-  /* .header {
-    border-right:10px; 
-    justify-content: end;
-    position: fixed;
-    left:106px;
-    z-index: 100;
-
-   } */
- 
-   /* .header-right-section {
-    margin-right: 32px;
-    position: relative;
-    left: clamp(-14px, -4px, -4px);
-    top: 15px;
-   z-index: 1;
- 
-  } */
   .header-right-section {
     margin-right: -11px;
     position: relative;
@@ -27,27 +10,13 @@
     top: 15px;
     z-index: 1;
   }
-  /* .header-left-section {
-    position: relative;
-    left: clamp(49px, 50px, 100px);
-    top: 30px;
-   
-  } */
+
   .header-left-section {
     position: relative;
-    left: clamp(49px, 62px, 100px);
     top: 30px;
     z-index: 1;
   }
-  /* .header-middle-section {
-    width: 35%;
-    height: auto;
-    position: relative;
-    right: clamp(52px, 64px, 104px);
-    bottom: 12px;
-    z-index: 1;
-   
-  } */
+
  
   .logo-store {
     width: 140px;
@@ -62,10 +31,6 @@
     position: relative;
     top: 42px;
    }
-   /* .offcanvas.hiding, .offcanvas.show, .offcanvas.showing {
-   width: 100%;
- 
-    } */
     .offcanvas,.offcanvas-end.show {
       z-index: 10000;
     }
@@ -73,27 +38,14 @@
       width: 58px;
       height: auto;
      }  
-     /* .offcanvas.offcanvas-start {
-      background-color: #35635A;
-      max-width: 25%;
-     } */
+ 
    
      .offcanvas-header{ 
       display: flex;
       flex-direction: row;
       
      }
-     /* .index-menu {
-      display: inline-block;
-      position: fixed;
-      height: 98px;
-      top: 0px;
-      left: 3px;
-      background-color: white;
-      width: 109px;
-      z-index: 99;
 
-     } */
      .index-menu {
       display: inline-block;
         position: relative;
@@ -123,10 +75,7 @@
   }
   /* -------------------- */
   /* Phan body */
-  .container-1 {
-    margin-bottom: clamp(213px, 234px, 329px);
-
-  }
+ 
   .container-1 img {
     width: 60px;
     height: auto;
@@ -141,7 +90,7 @@
     height: auto;
     width: 100%;
   }
-  .container-1,.container-2 {
+  .container-1{
     display: flex;
     flex-direction: column;
   }
@@ -158,7 +107,8 @@
 
   
   }
-  /* smartphone & mobile < 748px */
+
+  /* smartphone & mobile < 768px */
   @media only screen and (max-width: 47.9375em)  {
     .filter-section ,
     .name-employee p,
@@ -189,8 +139,8 @@
      /* Phan header */
       .header {
         width: 100%;
-        left: 59px;
-        margin-left: -63px;
+        left: -6px;
+        margin-left: 11px;
        }
       
       .header-left-title {
@@ -221,12 +171,10 @@
   
   
   }
-    /* Tablet: width >= 740px and width <1024px */
-    @media only screen and (min-width: 46.25em) and (max-width:63.9375em ) {
+    /* Tablet: width >= 768px and width <1024px */
+    @media only screen and (min-width: 48em) and (max-width:63.9375em ) {
       /* Phan header */
-     .header {
-      width: 100%;
-     }
+ 
      .header-left-section {
       width:25%;
     }
@@ -247,7 +195,7 @@
     .offcanvas.offcanvas-start,.offcanvas-backdrop {
       display: none;
         }
-        .index-menu {
+     .index-menu {
           display: none;
         }
   /* Phan body */

@@ -285,28 +285,100 @@
         <p><strong>Giá mỗi kg:</strong> <span class="space">10,000 VND</span></p>
       </div>
     </div>
-    <!-- </div> -->
     <div class="Button">
-      <div class="back-button-delete">
-        <a class="btn1" href="#logoutModal-1" class="navbar_logout">Xóa <p class="hide-index-smartphone">đơn hàng</p> <i
-            class="fa-solid fa-trash-can"></i></a>
-      </div>
-      <div id="logoutModal-1" class="modal">
-        <div class="modal_content">
-          <h2>Xác nhận xóa đơn <i class="fa-solid fa-trash-can"></i></h2>
-          <p>Bạn có chắc chắn muốn xóa đơn này không?</p>
-          <div class="modal_actions">
-
-            <a href="/logout" class="btn_2 confirm">Có</a>
-            <a href="#" class="btn_2 cancel">Không</a>
-          </div>
+      <div class="top-buttons">
+        <div class="back-button-delete">
+          <button class="btn1" onclick="openDeleteModal()">
+            <i class="fa-solid fa-trash-can"></i>
+            Xóa <span class="hide-on-mobile"> đơn hàng</span>
+          </button>
+        </div>
+        <div class="back-button">
+          <a href="/index/orderPage.html" class="btn_1">
+            <i class="fa-solid fa-rotate-left"></i>
+            Quay lại
+            <span class="hide-on-mobile"> danh sách</span>
+          </a>
         </div>
       </div>
-      <div class="back-button">
-        <a href="/index/orderPage.html" class="btn_1">Quay lại <p class="hide-index-smartphone">danh sách đơn hàng</p> <i
-            class="fa-solid fa-rotate-left"></i> </a>
+
+      <div class="back-button-edit">
+        <button class="btn2" onclick="openEditModal()">
+          <i class="fa-solid fa-pen-to-square"></i>Sửa
+          <span class="hide-on-mobile"> đơn hàng</span>
+        </button>
       </div>
     </div>
+
+
+    <div id="deleteModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeDeleteModal()">&times;</span>
+        <h2>Xác nhận xóa đơn hàng</h2>
+        <p>Bạn có chắc chắn muốn xóa đơn hàng này không?</p>
+        <div class="modal-buttons">
+          <button class="modal-confirm" onclick="confirmDelete()">Đồng ý</button>
+          <button class="modal-cancel" onclick="closeDeleteModal()">Hủy</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeEditModal()">&times;</span>
+        <h2>Xác nhận sửa đơn hàng</h2>
+        <p>Bạn có chắc chắn muốn sửa đơn hàng này không?</p>
+        <div class="modal-buttons">
+          <button class="modal-confirm" onclick="confirmEdit()">Đồng ý</button>
+          <button class="modal-cancel" onclick="closeEditModal()">Hủy</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      const editModal = document.getElementById("editModal");
+      const deleteModal = document.getElementById("deleteModal");
+
+      // Edit functions
+      function openEditModal() {
+        editModal.style.display = "block";
+      }
+
+      function closeEditModal() {
+        editModal.style.display = "none";
+      }
+
+      function confirmEdit() {
+        editModal.style.display = "none";
+        alert("Đã sửa đơn hàng thành công!");
+      }
+
+      // Delete functions
+      function openDeleteModal() {
+        deleteModal.style.display = "block";
+      }
+
+      function closeDeleteModal() {
+        deleteModal.style.display = "none";
+      }
+
+      function confirmDelete() {
+        deleteModal.style.display = "none";
+        alert("Đã xóa đơn hàng thành công!");
+      }
+
+      // Close modals when clicking outside
+      window.onclick = function (event) {
+        if (event.target == editModal) {
+          editModal.style.display = "none";
+        }
+        if (event.target == deleteModal) {
+          deleteModal.style.display = "none";
+        }
+      }
+    </script>
   </div>
 </body>
 
