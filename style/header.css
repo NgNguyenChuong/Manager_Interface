@@ -103,7 +103,7 @@
     }
     .header-left-title {
       font-size: 25px;
-      width: 113px;
+      width: 140px;
     }
     .fa-bars {
       font-size: 50px;
@@ -192,7 +192,7 @@
     width: 100%;
    }
    .header-left-section {
-    width:25%;
+    width:30%;
   }
 .header-left-title {
   transition: 1s;
