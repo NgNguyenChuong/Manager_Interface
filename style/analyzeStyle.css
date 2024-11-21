@@ -39,10 +39,10 @@ label {
 
 .main-container {
   display: flex;
-  height: calc(300vh - 100px);
-  overflow: hidden;
-  margin-left: -155px;
-  width: 116%;
+      height: calc(300vh - 100px);
+      overflow: hidden;
+      margin-left: -180px;
+      width: 100%;
 
 }
 body{
