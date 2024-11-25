@@ -178,3 +178,13 @@
         width: 50%;
     }
 }
+
+@media (max-width: 425px) {
+    .info-basic {
+        display: none;
+    }
+    .feature-button-customer {
+        margin-right: 15px;
+    }
+
+}
