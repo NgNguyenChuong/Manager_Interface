@@ -18,9 +18,9 @@
 
         <link href="../style/LogInfo.css" rel="stylesheet">
   <!-- Add bootstrap -->
-  <link href="/index/asset/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="asset/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Add reponsive -->
-  <link rel="stylesheet" href="/style/reponsiveAnalyze.css">
+  <link rel="stylesheet" href="../style/reponsiveAnalyze.css">
         
 
     </head>
@@ -294,18 +294,65 @@
                                 <img class="image-product" src="../image/product1.webp">
                             </div>
                             <div class="info-overview-order-product">
-                                <p style="
-                                    margin-bottom: 15px;   
-                                    ">Bắp cải hữu cơ</p>
+                                <p style="margin-bottom: 15px;">Bắp cải hữu cơ</p>
                                 <p>Ngày hết hạn: 00/00/2000</p>
                                 <p>Kho: 34</p>
-                                
                             </div>
                             <div class="handle-product">
-                                <button class="button-handle-product">Xử lý</button>
-                                <div class="active-handle-contain">
-                                    <button onclick="confirmDeleteAction()" class="button-delete">Xóa sản phẩm</button>
-                                    <button class="button-update">Chỉnh sửa</button>
+                                <button onclick="toggleProductDetails(this)" class="button-handle-product">Xử lý</button>
+                                <div class="product-details-popup">
+                                    <h3>Thông tin sản phẩm</h3>
+                                    <div class="detail-row">
+                                        <label>Tên sản phẩm:</label>
+                                        <p>Bắp cải hữu cơ</p>
+                                    </div>
+                                    <div class="detail-row">
+                                        <label>Mô tả:</label>
+                                        <p>Bắp cải hữu cơ tươi ngon</p>
+                                    </div>
+                                    <div class="detail-row">
+                                        <label>Xuất xứ:</label>
+                                        <p>Việt Nam</p>
+                                    </div>
+                                    <div class="detail-row">
+                                        <label>Thành phần:</label>
+                                        <p>100% bắp cải hữu cơ</p>
+                                    </div>
+                                    <div class="detail-row">
+                                        <label>Khối lượng tịnh:</label>
+                                        <p>500g</p>
+                                    </div>
+                                    <div class="detail-row">
+                                        <label>Hạn sử dụng:</label>
+                                        <p>00/00/2000</p>
+                                    </div>
+                                    <div class="detail-row">
+                                        <label>Số lượng trong kho:</label>
+                                        <p>34</p>
+                                    </div>
+                                    <div class="action-buttons">
+                                        <button onclick="toggleEditPopup(this)" class="edit-btn">Chỉnh sửa</button>
+                                        <button onclick="confirmDeleteAction()" class="delete-btn">Xóa sản phẩm</button>
+                                        <button onclick="closeProductDetails(this)" class="close-btn">Đóng</button>
+                                    </div>
+                                </div>
+                                <div class="edit-product-popup">
+                                    <h3>Chỉnh sửa thông tin</h3>
+                                    <input type="text" class="edit-input" placeholder="Tên sản phẩm">
+                                    <input type="text" class="edit-input" placeholder="Mô tả">
+                                    <input type="text" class="edit-input" placeholder="Xuất xứ">
+                                    <input type="text" class="edit-input" placeholder="Thành phần">
+                                    <input type="text" class="edit-input" placeholder="Khối lượng tịnh">
+                                    <input type="text" class="edit-input" placeholder="Hạn sử dụng">
+                                    <input type="text" class="edit-input" placeholder="Số lượng trong kho">
+                                    <div class="edit-image-section">
+                                        <button class="delete-image-btn" onclick="confirmDeleteImage(this)">Xóa ảnh</button>
+                                        <input type="file" class="new-image-input">
+                                    </div>
+                                    <div class="edit-actions">
+                                        <button onclick="saveChanges(this)" class="save-btn">Lưu</button>
+                                        <button onclick="cancelEdit(this)" class="cancel-btn">Hủy</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -322,12 +369,62 @@
                                 
                             </div>
                             <div class="handle-product">
-                                <button class="button-handle-product">Xử lý</button>
-                                <div class="active-handle-contain">
-                                    <button onclick="confirmDeleteAction()" class="button-delete">Xoá sản phẩm</button>
-                                    <button class="button-update">Chỉnh sửa</button>
-                                </div>
-                            </div>
+                              <button onclick="toggleProductDetails(this)" class="button-handle-product">Xử lý</button>
+                              <div class="product-details-popup">
+                                  <h3>Thông tin sản phẩm</h3>
+                                  <div class="detail-row">
+                                      <label>Tên sản phẩm:</label>
+                                      <p>Cải Ngọt</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Mô tả:</label>
+                                      <p>Cải ngọt hữu cơ tươi ngon</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Xuất xứ:</label>
+                                      <p>Việt Nam</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Thành phần:</label>
+                                      <p>100% Cải ngọt hữu cơ</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Khối lượng tịnh:</label>
+                                      <p>500g</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Hạn sử dụng:</label>
+                                      <p>00/00/2000</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Số lượng trong kho:</label>
+                                      <p>34</p>
+                                  </div>
+                                  <div class="action-buttons">
+                                      <button onclick="toggleEditPopup(this)" class="edit-btn">Chỉnh sửa</button>
+                                      <button onclick="confirmDeleteAction()" class="delete-btn">Xóa sản phẩm</button>
+                                      <button onclick="closeProductDetails(this)" class="close-btn">Đóng</button>
+                                  </div>
+                              </div>
+                              <div class="edit-product-popup">
+                                  <h3>Chỉnh sửa thông tin</h3>
+                                  <input type="text" class="edit-input" placeholder="Tên sản phẩm">
+                                  <input type="text" class="edit-input" placeholder="Mô tả">
+                                  <input type="text" class="edit-input" placeholder="Xuất xứ">
+                                  <input type="text" class="edit-input" placeholder="Thành phần">
+                                  <input type="text" class="edit-input" placeholder="Khối lượng tịnh">
+                                  <input type="text" class="edit-input" placeholder="Hạn sử dụng">
+                                  <input type="text" class="edit-input" placeholder="Số lượng trong kho">
+                                  <div class="edit-image-section">
+                                      <button class="delete-image-btn" onclick="confirmDeleteImage(this)">Xóa ảnh</button>
+                                      <input type="file" class="new-image-input">
+                                  </div>
+                                  <div class="edit-actions">
+                                      <button onclick="saveChanges(this)" class="save-btn">Lưu</button>
+                                      <button onclick="cancelEdit(this)" class="cancel-btn">Hủy</button>
+                                  </div>
+                              </div>
+                          </div>
                         </div>
                         <div class="overview-product">
                             <div>
@@ -341,12 +438,62 @@
                                 <p>Kho: 34</p>
                             </div>
                             <div class="handle-product">
-                                <button class="button-handle-product">Xử lý</button>
-                                <div class="active-handle-contain">
-                                    <button onclick="confirmDeleteAction()" class="button-delete">Xóa sản phẩm</button>
-                                    <button class="button-update">Chỉnh sửa</button>
-                                </div>
-                            </div>
+                              <button onclick="toggleProductDetails(this)" class="button-handle-product">Xử lý</button>
+                              <div class="product-details-popup">
+                                  <h3>Thông tin sản phẩm</h3>
+                                  <div class="detail-row">
+                                      <label>Tên sản phẩm:</label>
+                                      <p>Cà chua</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Mô tả:</label>
+                                      <p>Cà chua organic đà lạt</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Xuất xứ:</label>
+                                      <p>Việt Nam</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Thành phần:</label>
+                                      <p>100% bắp cải hữu cơ</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Khối lượng tịnh:</label>
+                                      <p>500g</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Hạn sử dụng:</label>
+                                      <p>00/00/2000</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Số lượng trong kho:</label>
+                                      <p>34</p>
+                                  </div>
+                                  <div class="action-buttons">
+                                      <button onclick="toggleEditPopup(this)" class="edit-btn">Chỉnh sửa</button>
+                                      <button onclick="confirmDeleteAction()" class="delete-btn">Xóa sản phẩm</button>
+                                      <button onclick="closeProductDetails(this)" class="close-btn">Đóng</button>
+                                  </div>
+                              </div>
+                              <div class="edit-product-popup">
+                                  <h3>Chỉnh sửa thông tin</h3>
+                                  <input type="text" class="edit-input" placeholder="Tên sản phẩm">
+                                  <input type="text" class="edit-input" placeholder="Mô tả">
+                                  <input type="text" class="edit-input" placeholder="Xuất xứ">
+                                  <input type="text" class="edit-input" placeholder="Thành phần">
+                                  <input type="text" class="edit-input" placeholder="Khối lượng tịnh">
+                                  <input type="text" class="edit-input" placeholder="Hạn sử dụng">
+                                  <input type="text" class="edit-input" placeholder="Số lượng trong kho">
+                                  <div class="edit-image-section">
+                                      <button class="delete-image-btn" onclick="confirmDeleteImage(this)">Xóa ảnh</button>
+                                      <input type="file" class="new-image-input">
+                                  </div>
+                                  <div class="edit-actions">
+                                      <button onclick="saveChanges(this)" class="save-btn">Lưu</button>
+                                      <button onclick="cancelEdit(this)" class="cancel-btn">Hủy</button>
+                                  </div>
+                              </div>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -389,6 +536,71 @@
                     alert("Yêu cầu đã bị hủy.");
                 }
             }
+            function toggleProductDetails(button) {
+                const allPopups = document.querySelectorAll('.product-details-popup, .edit-product-popup');
+                allPopups.forEach(popup => {
+                    if (popup !== button.nextElementSibling) {
+                        popup.classList.remove('active');
+                    }
+                });
+                const detailsPopup = button.nextElementSibling;
+                detailsPopup.classList.toggle('active');
+            }
+
+            function closeProductDetails(button) {
+                const popup = button.closest('.product-details-popup');
+                popup.classList.remove('active');
+            }
+
+            function toggleEditPopup(button) {
+                const detailsPopup = button.closest('.product-details-popup');
+                detailsPopup.classList.remove('active');
+                const editPopup = button.closest('.handle-product').querySelector('.edit-product-popup');
+                editPopup.classList.add('active');
+            }
+
+            function saveChanges(button) {
+                let confirmAction = confirm("Bạn có chắc chắn muốn lưu các thay đổi?");
+                if (confirmAction) {
+                    alert("Đã lưu thay đổi thành công!");
+                    const editPopup = button.closest('.edit-product-popup');
+                    editPopup.classList.remove('active');
+                }
+            }
+
+            function cancelEdit(button) {
+                let confirmAction = confirm("Bạn có chắc chắn muốn hủy các thay đổi?");
+                if (confirmAction) {
+                    const editPopup = button.closest('.edit-product-popup');
+                    editPopup.classList.remove('active');
+                }
+            }
+
+            function confirmDeleteImage(button) {
+                let confirmAction = confirm("Bạn có chắc chắn muốn xóa ảnh này không?");
+                if (confirmAction) {
+                    alert("Đã xóa ảnh thành công!");
+                } else {
+                    alert("Đã hủy xóa ảnh!");
+                }
+            }
+
+            // Thêm event listener để đóng popup khi click ra ngoài
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.handle-product')) {
+                    const allPopups = document.querySelectorAll('.product-details-popup, .edit-product-popup');
+                    allPopups.forEach(popup => {
+                        popup.classList.remove('active');
+                    });
+                }
+            });
+
+            // Ngăn chặn việc đóng popup khi click vào bên trong
+            document.querySelectorAll('.product-details-popup, .edit-product-popup').forEach(popup => {
+                popup.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                });
+            });
         </script>
         <script src="./asset/bootstrap/js/bootstrap.bundle.min.js"></script>
     </body>

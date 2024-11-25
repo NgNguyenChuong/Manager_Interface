@@ -43,9 +43,7 @@
     background-color: #35635A;
     color:#FAD4AE;
 }
-.search-icon-customer:active {
-    opacity: 0.8;
-}
+
 .listCustomer{
     flex-direction: column;
     margin-left: 30px;
@@ -70,6 +68,7 @@
 }
 .image-customer {
     height: 50px;
+    width: 50px;
     border-radius: 50%;
     margin-left: 10px;
     border-width: 4px;
@@ -109,6 +108,7 @@
 .detail-info-container {
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
     width: 90%;
 }
 .feature-button-customer {

@@ -190,7 +190,7 @@
                   <i class="fa-solid fa-warehouse" style="font-size: 20px;
                   color: #FAD4AE;
               "></i></button>
-                <p>Kho hàng</p>
+                <p>Kho hng</p>
               </div>
             </a>
             <a href="customer.html" style="text-decoration: none; color: black;">
@@ -246,7 +246,7 @@
             <div class="container-search-warehouse">
                 <input class="search-bar" type="text"
                  placeholder="Tìm kiếm sản phẩm">
-                 <a href="wareHouse2.html" style="text-decoration: none; color: black;">
+                 <a href="wareHouse.html" style="text-decoration: none; color: black;">
                   <button class="search-icon-warehouse">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
@@ -302,10 +302,60 @@
                                 
                             </div>
                             <div class="handle-product">
-                                <button class="button-handle-product">Xử lý</button>
-                                <div class="active-handle-contain">
-                                    <button onclick="confirmDeleteAction()" class="button-delete">Xóa sản phẩm</button>
-                                    <button class="button-update">Chỉnh sửa</button>
+                                <button onclick="toggleProductDetails(this)" class="button-handle-product">Xử lý</button>
+                                <div class="product-details-popup">
+                                    <h3>Thông tin sản phẩm</h3>
+                                    <div class="detail-row">
+                                        <label>Tên sản phẩm:</label>
+                                        <p>Bò Fuji</p>
+                                    </div>
+                                    <div class="detail-row">
+                                        <label>Mô tả:</label>
+                                        <p>Thịt bò Fuji nhập khẩu</p>
+                                    </div>
+                                    <div class="detail-row">
+                                        <label>Xuất xứ:</label>
+                                        <p>Nhật Bản</p>
+                                    </div>
+                                    <div class="detail-row">
+                                        <label>Thành phần:</label>
+                                        <p>100% thịt bò</p>
+                                    </div>
+                                    <div class="detail-row">
+                                        <label>Khối lượng tịnh:</label>
+                                        <p>500g</p>
+                                    </div>
+                                    <div class="detail-row">
+                                        <label>Hạn sử dụng:</label>
+                                        <p>00/00/2000</p>
+                                    </div>
+                                    <div class="detail-row">
+                                        <label>Số lượng trong kho:</label>
+                                        <p>34</p>
+                                    </div>
+                                    <div class="action-buttons">
+                                        <button onclick="toggleEditPopup(this)" class="edit-btn">Chỉnh sửa</button>
+                                        <button onclick="confirmDeleteAction()" class="delete-btn">Xóa sản phẩm</button>
+                                        <button onclick="closeProductDetails(this)" class="close-btn">Đóng</button>
+                                    </div>
+                                </div>
+                                <div class="edit-product-popup">
+                                    <h3>Chỉnh sửa thông tin</h3>
+                                    <input type="text" class="edit-input" placeholder="Tên sản phẩm">
+                                    <input type="text" class="edit-input" placeholder="Mô tả">
+                                    <input type="text" class="edit-input" placeholder="Xuất xứ">
+                                    <input type="text" class="edit-input" placeholder="Thành phần">
+                                    <input type="text" class="edit-input" placeholder="Khối lượng tịnh">
+                                    <input type="text" class="edit-input" placeholder="Hạn sử dụng">
+                                    <input type="text" class="edit-input" placeholder="Số lượng trong kho">
+                                    <div class="edit-image-section">
+                                        <button class="delete-image-btn" onclick="confirmDeleteImage(this)">Xóa ảnh</button>
+                                        <input type="file" class="new-image-input">
+                                    </div>
+                                    <div class="edit-actions">
+                                        <button onclick="saveChanges(this)" class="save-btn">Lưu</button>
+                                        <button onclick="cancelEdit(this)" class="cancel-btn">Hủy</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -322,12 +372,62 @@
                                 
                             </div>
                             <div class="handle-product">
-                                <button class="button-handle-product">Xử lý</button>
-                                <div class="active-handle-contain">
-                                    <button onclick="confirmDeleteAction()" class="button-delete">Xoá sản phẩm</button>
-                                    <button class="button-update">Chỉnh sửa</button>
-                                </div>
-                            </div>
+                              <button onclick="toggleProductDetails(this)" class="button-handle-product">Xử lý</button>
+                              <div class="product-details-popup">
+                                  <h3>Thông tin sản phẩm</h3>
+                                  <div class="detail-row">
+                                      <label>Tên sản phẩm:</label>
+                                      <p>Bò Waygu</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Mô tả:</label>
+                                      <p>Thịt bò Waygu nhập khẩu</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Xuất xứ:</label>
+                                      <p>Nhật Bản</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Thành phần:</label>
+                                      <p>100% thịt bò</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Khối lượng tịnh:</label>
+                                      <p>500g</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Hạn sử dụng:</label>
+                                      <p>00/00/2000</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Số lượng trong kho:</label>
+                                      <p>34</p>
+                                  </div>
+                                  <div class="action-buttons">
+                                      <button onclick="toggleEditPopup(this)" class="edit-btn">Chỉnh sửa</button>
+                                      <button onclick="confirmDeleteAction()" class="delete-btn">Xóa sản phẩm</button>
+                                      <button onclick="closeProductDetails(this)" class="close-btn">Đóng</button>
+                                  </div>
+                              </div>
+                              <div class="edit-product-popup">
+                                  <h3>Chỉnh sửa thông tin</h3>
+                                  <input type="text" class="edit-input" placeholder="Tên sản phẩm">
+                                  <input type="text" class="edit-input" placeholder="Mô tả">
+                                  <input type="text" class="edit-input" placeholder="Xuất xứ">
+                                  <input type="text" class="edit-input" placeholder="Thành phần">
+                                  <input type="text" class="edit-input" placeholder="Khối lượng tịnh">
+                                  <input type="text" class="edit-input" placeholder="Hạn sử dụng">
+                                  <input type="text" class="edit-input" placeholder="Số lượng trong kho">
+                                  <div class="edit-image-section">
+                                      <button class="delete-image-btn" onclick="confirmDeleteImage(this)">Xóa ảnh</button>
+                                      <input type="file" class="new-image-input">
+                                  </div>
+                                  <div class="edit-actions">
+                                      <button onclick="saveChanges(this)" class="save-btn">Lưu</button>
+                                      <button onclick="cancelEdit(this)" class="cancel-btn">Hủy</button>
+                                  </div>
+                              </div>
+                          </div>
                         </div>
                         <div class="overview-product">
                             <div>
@@ -341,17 +441,67 @@
                                 <p>Kho: 34</p>
                             </div>
                             <div class="handle-product">
-                                <button class="button-handle-product">Xử lý</button>
-                                <div class="active-handle-contain">
-                                    <button onclick="confirmDeleteAction()" class="button-delete">Xóa sản phẩm</button>
-                                    <button class="button-update">Chỉnh sửa</button>
-                                </div>
-                            </div>
+                              <button onclick="toggleProductDetails(this)" class="button-handle-product">Xử lý</button>
+                              <div class="product-details-popup">
+                                  <h3>Thông tin sản phẩm</h3>
+                                  <div class="detail-row">
+                                      <label>Tên sản phẩm:</label>
+                                      <p>Bò Kobe</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Mô tả:</label>
+                                      <p>Thịt bò Kobe nhập khẩu</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Xuất xứ:</label>
+                                      <p>Nhật Bản</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Thành phần:</label>
+                                      <p>100% thịt bò</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Khối lượng tịnh:</label>
+                                      <p>500g</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Hạn sử dụng:</label>
+                                      <p>00/00/2000</p>
+                                  </div>
+                                  <div class="detail-row">
+                                      <label>Số lượng trong kho:</label>
+                                      <p>34</p>
+                                  </div>
+                                  <div class="action-buttons">
+                                      <button onclick="toggleEditPopup(this)" class="edit-btn">Chỉnh sửa</button>
+                                      <button onclick="confirmDeleteAction()" class="delete-btn">Xóa sản phẩm</button>
+                                      <button onclick="closeProductDetails(this)" class="close-btn">Đóng</button>
+                                  </div>
+                              </div>
+                              <div class="edit-product-popup">
+                                  <h3>Chỉnh sửa thông tin</h3>
+                                  <input type="text" class="edit-input" placeholder="Tên sản phẩm">
+                                  <input type="text" class="edit-input" placeholder="Mô tả">
+                                  <input type="text" class="edit-input" placeholder="Xuất xứ">
+                                  <input type="text" class="edit-input" placeholder="Thành phần">
+                                  <input type="text" class="edit-input" placeholder="Khối lượng tịnh">
+                                  <input type="text" class="edit-input" placeholder="Hạn sử dụng">
+                                  <input type="text" class="edit-input" placeholder="Số lượng trong kho">
+                                  <div class="edit-image-section">
+                                      <button class="delete-image-btn" onclick="confirmDeleteImage(this)">Xóa ảnh</button>
+                                      <input type="file" class="new-image-input">
+                                  </div>
+                                  <div class="edit-actions">
+                                      <button onclick="saveChanges(this)" class="save-btn">Lưu</button>
+                                      <button onclick="cancelEdit(this)" class="cancel-btn">Hủy</button>
+                                  </div>
+                              </div>
+                          </div>
                         </div>
                     </div>
                 </div>
                 <div class="history">
-                  <p>Lịch sử</p>
+                  <p>Lịch s��</p>
                   <br>
                   <p>--------------------------</p>
                   <p>Tính năng chưa phát triển</p>
@@ -387,6 +537,112 @@
                 } else {
                     // Hành động khi người dùng nhấn "Cancel"
                     alert("Yêu cầu đã bị hủy.");
+                }
+            }
+            function toggleEditPopup(button) {
+                // Đóng popup chi tiết sản phẩm
+                const detailsPopup = button.closest('.product-details-popup');
+                detailsPopup.classList.remove('active');
+                
+                // Mở popup chỉnh sửa
+                const editPopup = button.closest('.handle-product').querySelector('.edit-product-popup');
+                editPopup.classList.add('active');
+            }
+
+            function saveChanges(button) {
+                let confirmAction = confirm("Bạn có chắc chắn muốn lưu các thay đổi?");
+                if (confirmAction) {
+                    alert("Đã lưu thay đổi thành công!");
+                    // Đóng popup chỉnh sửa
+                    const editPopup = button.closest('.edit-product-popup');
+                    editPopup.classList.remove('active');
+                }
+            }
+
+            function cancelEdit(button) {
+                let confirmAction = confirm("Bạn có chắc chắn muốn hủy các thay đổi?");
+                if (confirmAction) {
+                    // Đóng popup chỉnh sửa
+                    const editPopup = button.closest('.edit-product-popup');
+                    editPopup.classList.remove('active');
+                }
+            }
+
+            function toggleHandleMenu(button) {
+                // Đóng tất cả các menu xử lý khác
+                const allMenus = document.querySelectorAll('.active-handle-contain');
+                allMenus.forEach(menu => {
+                    if (menu !== button.nextElementSibling) {
+                        menu.classList.remove('active');
+                    }
+                });
+
+                // Toggle menu hiện tại
+                const menu = button.nextElementSibling;
+                menu.classList.toggle('active');
+            }
+
+            // Thêm event listener để đóng menu khi click ra ngoài
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.handle-product')) {
+                    const allMenus = document.querySelectorAll('.active-handle-contain');
+                    allMenus.forEach(menu => {
+                        menu.classList.remove('active');
+                    });
+                }
+            });
+
+            // Ngăn chặn việc đóng menu khi click vào bên trong menu
+            document.querySelectorAll('.active-handle-contain').forEach(menu => {
+                menu.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                });
+            });
+
+            function toggleProductDetails(button) {
+                // Đóng tất cả các popup đang mở
+                const allPopups = document.querySelectorAll('.product-details-popup, .edit-product-popup');
+                allPopups.forEach(popup => {
+                    if (popup !== button.nextElementSibling) {
+                        popup.classList.remove('active');
+                    }
+                });
+
+                // Mở/đóng popup chi tiết sản phẩm
+                const detailsPopup = button.nextElementSibling;
+                detailsPopup.classList.toggle('active');
+            }
+
+            function closeProductDetails(button) {
+                const popup = button.closest('.product-details-popup');
+                popup.classList.remove('active');
+            }
+
+            // Cập nhật event listener đóng popup khi click ra ngoài
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.handle-product')) {
+                    const allPopups = document.querySelectorAll('.product-details-popup, .edit-product-popup');
+                    allPopups.forEach(popup => {
+                        popup.classList.remove('active');
+                    });
+                }
+            });
+
+            // Ngăn chặn việc đóng popup khi click vào bên trong
+            document.querySelectorAll('.edit-product-popup').forEach(popup => {
+                popup.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                });
+            });
+
+            // Thêm hàm xử lý sự kiện xóa ảnh
+            function confirmDeleteImage(button) {
+                let confirmAction = confirm("Bạn có chắc chắn muốn xóa ảnh này không?");
+                if (confirmAction) {
+                    alert("Đã xóa ảnh thành công!");
+                    // Thêm logic xóa ảnh ở đây
+                } else {
+                    alert("Đã hủy xóa ảnh!");
                 }
             }
         </script>
