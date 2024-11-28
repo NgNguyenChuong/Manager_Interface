@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quản lý bán hàng</title>
+        
+        
+        <link href="../style/main_warehouse.css" rel="stylesheet">
+        <link rel="stylesheet" href="../style/header.css">
+        <link rel="stylesheet" href="../style/sidebar.css">
+        <link href="../icon/css/all.css" rel="stylesheet">
+        <link href="../style/generall.css" rel="stylesheet">
+        <link href="../style/main.css" rel="stylesheet">
+
+        <link href="../style/login.css" rel="stylesheet">
+  <!-- Add bootstrap -->
+  <link href="asset/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Add reponsive -->
+  <link rel="stylesheet" href="../style/reponsiveAnalyze.css">
+        <link rel="stylesheet" href="../style/login.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body style="height: 10000px;">
+      <div class="header">
+        <div class="index-menu">
+          <i class="fa-solid fa-bars" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+            aria-controls="offcanvasExample">
+          </i>
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div style=" 
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgb(176, 176, 176);" class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Mục lục</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <a href="homePage.html" style="text-decoration: none; color: black;">
+                <div class="container-function-selection">
+                  <button class="button-function-selection">
+                    <i class="fa-solid fa-house" style="
+                      font-size: 20px;
+                      color: #FAD4AE;
+                      "></i>
+                  </button>
+                  <p>Trang chủ</p>
+                </div>
+              </a>
+              <a href="wareHouse.html" style="text-decoration: none; color: black;" >
+                <div class="container-function-selection">
+                  <button class="button-function-selection" style="background-color: #6aa173;">
+                    <i class="fa-solid fa-warehouse" style="font-size: 20px;
+                      color: #FAD4AE;
+                  "></i></button>
+                  <p>Kho hàng</p>
+                </div>
+              </a>
+              <a href="customer.html" style="text-decoration: none; color: black;">
+                <div class="container-function-selection">
+                  <button class="button-function-selection" >
+                    <i class="fa-solid fa-users" style="
+                                  font-size: 20px;
+                                  color: #FAD4AE;
+                              "></i>
+                  </button>
+                  <p style="color: black;text-align: center; font-size: 10x;">Khách hàng</p>
+                </div>
+              </a>
+              <a href="orderPage.html" style="text-decoration: none; color: black;">
+                <div class="container-function-selection">
+                  <button class="button-function-selection" >
+                    <i class="fa-solid fa-list-check" style="
+                              font-size: 18px;
+                              color: #FAD4AE;
+                              "></i>
+                  </button>
+                  <p style="color:black">Đơn hàng</p>
+                </div>
+              </a>
+              <a href="analyzePage.html" style="text-decoration: none; color: black;">
+                <div class="container-function-selection">
+                  <button class="button-function-selection">
+                    <i class="fa-solid fa-chart-simple" style="
+                              font-size: 20px;
+                              color: #FAD4AE;
+                          "></i>
+                  </button>
+                  <p>Thống kê</p>
+                </div>
+              </a>
+              <a href="accountPage.html" style="text-decoration: none; color: black;">
+                <div class="container-function-selection">
+                  <button class="button-function-selection">
+                    <i class="fa-solid fa-circle-user" style="
+                               font-size: 20px;
+                               color: #FAD4AE;
+                           "></i>
+                  </button>
+                  <p style="color:black">Tài khoản</p>
+                </div>
+              </a>
+            </div>
+          </div>
+      
+        </div>
+        <div class="header-left-section">
+          <p class="header-left-title">Kho hàng</p>
+        </div>
+        <div class="header-middle-section">
+          <img class="logo-store" src="../image/logo.webp">
+        </div>
+        <div class="header-right-section">
+          <div class="bell-notification">
+            <i class="fa-regular fa-bell" style="
+                            color: #64792c;
+                            font-size: 45px;
+                            width:100%;
+                            "></i>
+          </div>
+          <div>
+            <div class="position-employee">
+              <p>Nhân viên</p>
+            </div>
+            <div class="name-employee">
+              <p>Nguyen Chuong</p>
+            </div>
+          </div>
+          <div>
+            <img class="avatar" class src="../image/chuong-avatar.jpg" alt="" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+          </div>
+          <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div style=" 
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                border-bottom-color: rgb(176, 176, 176);" class="offcanvas-header">
+              <img class="avatar" class src="../image/chuong-avatar.jpg" alt="">
+              <div style="display: flex; flex-direction: column; height: 95px;">
+                <h4 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">NgNguyenChuong</h4>
+                <h5>Ng_Nguyen_Chuong</h5>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <a href="accountPage.html" class="navbar_user">
+                <i class="fa-solid fa-user"></i>
+                <p>Thông tin cá nhân </p>
+              </a>
+              <a href="#logoutModal" class="navbar_logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <p>Đăng xuất</p>
+              </a>
+              <div id="logoutModal" class="modal">
+                <div class="modal_content">
+                  <h2>Xác nhận đăng xuất</h2>
+                  <p>Bạn có chắc chắn muốn đăng xuất không?</p>
+                  <div class="modal_actions">
+                    <a href="/index.html" class="btn_2 confirm">Đăng xuất</a>
+                    <a href="#" class="btn_2 cancel">Hủy</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+        <div class="side-bar">
+            <div class="backToHome">
+              <a href="homePage.html" style="text-decoration: none; color: black;">
+                <div class="container-function-selection">
+                  <button class="button-function-selection" style="margin-top: 35px;">
+                    <i class="fa-solid fa-house" style="
+                    font-size: 20px;
+                    color: #FAD4AE;
+                    "></i>
+                  </button>
+                  <p>Trang chủ</p>
+                </div>
+              </a>
+            </div>
+            <a href="wareHouse.html" style="text-decoration: none; color: black;">
+              <div class="container-function-selection">
+                <button class="button-function-selection" style="background-color: #6aa173;">
+                  <i class="fa-solid fa-warehouse" style="font-size: 20px;
+                  color: #FAD4AE;
+              "></i></button>
+                <p>Kho hàng</p>
+              </div>
+            </a>
+            <a href="customer.html" style="text-decoration: none; color: black;">
+            <div class="container-function-selection">
+              <button class="button-function-selection">
+                <i class="fa-solid fa-users" style="
+                              font-size: 20px;
+                              color: #FAD4AE;
+                          "></i>
+              </button>
+              <p>Khách hàng</p>
+            </div>
+            </a>
+            <a href="orderPage.html" style="text-decoration: none; color: black;">
+              <div class="container-function-selection">
+                <button class="button-function-selection" >
+                  <i class="fa-solid fa-list-check" style="
+                          font-size: 20px;
+                          color: #FAD4AE;
+                          "></i>
+                </button>
+                <p>Đơn hàng</p>
+              </div>
+            </a>
+            <a href="analyzePage.html" style="text-decoration: none; color: black;">
+              <div class="container-function-selection">
+                <button class="button-function-selection">
+                  <i class="fa-solid fa-chart-simple" style="
+                          font-size: 20px;
+                          color: #FAD4AE;
+                      "></i>
+                </button>
+                <p>Thống kê</p>
+              </div>
+            </a>
+            <a href="accountPage.html" style="text-decoration: none; color: black;">
+              <div class="container-function-selection">
+                <button class="button-function-selection">
+                  <i class="fa-solid fa-circle-user" style="
+                           font-size: 20px;
+                           color: #FAD4AE;
+                       "></i>
+                </button>
+                <p>Tài khoản</p>
+              </div>
+            </a>
+          </div>
+
+
+        
+
+        <div>
+            <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+<div class="container">
+  <div class="frame">
+    <div class="nav">
+      <ul class="links">
+        <li class="signin-active"><a class="btn">Đăng nhập</a></li>
+        <li class="signup-inactive"><a class="btn">Đăng ký</a></li>
+      </ul>
+    </div>
+    <div ng-app ng-init="checked = false">
+				        <form class="form-signin" action="" method="post" name="form">
+          <label for="username">Tên đăng nhập</label>
+          <input class="form-styling" type="text" name="username"/>
+          <label for="password">Mật khẩu</label>
+          <input class="form-styling" type="password" name="password"/>
+          <input type="checkbox" id="checkbox"/>
+          <label for="checkbox"><span class="ui" style="margin-left: 20px"></span>Duy trì đăng nhập</label>
+          <div class="btn-animate">
+            <a class="btn-signin">Đăng nhập</a>
+          </div>
+				        </form>
+        
+				        <form class="form-signup" action="" method="post" name="form">
+          <label for="fullname">Họ và tên</label>
+          <input class="form-styling" type="text" name="fullname"/>
+          <label for="username">Tên đăng nhập</label>
+          <input class="form-styling" type="text" name="username"/>
+          <label for="email">Email</label>
+          <input class="form-styling" type="text" name="email"/>
+          <label for="password">Mật khẩu</label>
+          <input class="form-styling" type="password" name="password"/>
+          <label for="confirmpassword">Xác nhận mật khẩu</label>
+          <input class="form-styling" type="password" name="confirmpassword"/>
+          <a ng-click="checked = !checked" class="btn-signup">Đăng ký</a>
+				        </form>
+      
+            <div  class="success">
+              <svg width="270" height="270" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       viewBox="0 0 60 60" id="check" ng-class="checked ? 'checked' : ''">
+                 <path fill="#ffffff" d="M40.61,23.03L26.67,36.97L13.495,23.788c-1.146-1.147-1.359-2.936-0.504-4.314
+                  c3.894-6.28,11.169-10.243,19.283-9.348c9.258,1.021,16.694,8.542,17.622,17.81c1.232,12.295-8.683,22.607-20.849,22.042
+                  c-9.9-0.46-18.128-8.344-18.972-18.218c-0.292-3.416,0.276-6.673,1.51-9.578" />
+                </svg>
+                <button class="btn-login-now">Đăng nhập ngay</button>
+             </div>
+      </div>
+      
+      <div class="forgot">
+        <a href="#">Quên mật khẩu?</a>
+      </div>
+      
+      <div>
+        <div class="cover-photo"></div>
+        <div class="profile-photo"></div>
+        <h1 class="welcome">Welcome, Chris</h1>
+        <a class="btn-goback" href="homePage.html">Go back</a>
+      </div>
+  </div>
+    
+  <a id="refresh" value="Refresh" onClick="history.go()">
+    <svg class="refreshicon"   version="1.1" id="Capa_1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         width="25px" height="25px" viewBox="0 0 322.447 322.447" style="enable-background:new 0 0 322.447 322.447;"
+         xml:space="preserve">
+         <path  d="M321.832,230.327c-2.133-6.565-9.184-10.154-15.75-8.025l-16.254,5.281C299.785,206.991,305,184.347,305,161.224
+                c0-84.089-68.41-152.5-152.5-152.5C68.411,8.724,0,77.135,0,161.224s68.411,152.5,152.5,152.5c6.903,0,12.5-5.597,12.5-12.5
+                c0-6.902-5.597-12.5-12.5-12.5c-70.304,0-127.5-57.195-127.5-127.5c0-70.304,57.196-127.5,127.5-127.5
+                c70.305,0,127.5,57.196,127.5,127.5c0,19.372-4.371,38.337-12.723,55.568l-5.553-17.096c-2.133-6.564-9.186-10.156-15.75-8.025
+                c-6.566,2.134-10.16,9.186-8.027,15.751l14.74,45.368c1.715,5.283,6.615,8.642,11.885,8.642c1.279,0,2.582-0.198,3.865-0.614
+                l45.369-14.738C320.371,243.946,323.965,236.895,321.832,230.327z"/>
+    </svg>
+  </a>
+</div>
+        </div>
+        <script>
+            function confirmAddProduct() {
+                let confirmAction = confirm("Bạn có chắc chắn muốn thêm sản phẩm này không?");
+                if (confirmAction) {
+                    // Thực hiện hành động khi người dùng nhấn "OK"
+                    alert("Yêu cầu đã được thực hiện.");
+                } else {
+                    // Hành động khi người dùng nhấn "Cancel"
+                    alert("Yêu cầu đã bị hủy.");
+                }
+            }
+            function confirmNotAddProduct() {
+                let confirmAction = confirm("Bạn có chắc chắn không muốn thêm sản phẩm này không?");
+                if (confirmAction) {
+                    // Thực hiện hành động khi người dùng nhấn "OK"
+                    alert("Yêu cầu đã được thực hiện.");
+                } else {
+                    // Hành động khi người dùng nhấn "Cancel"
+                    alert("Yêu cầu đã bị hủy.");
+                }
+            }
+            function confirmDeleteAction() {
+                let confirmAction = confirm("Bạn có chắc chắn muốn xoá sản phẩm này không?");
+                if (confirmAction) {
+                    // Thực hiện hành động khi người dùng nhấn "OK"
+                    alert("Yêu cầu đã được thực hiện.");
+                } else {
+                    // Hành động khi người dùng nhấn "Cancel"
+                    alert("Yêu cầu đã bị hủy.");
+                }
+            }
+            function toggleProductDetails(button) {
+                const allPopups = document.querySelectorAll('.product-details-popup, .edit-product-popup');
+                allPopups.forEach(popup => {
+                    if (popup !== button.nextElementSibling) {
+                        popup.classList.remove('active');
+                    }
+                });
+                const detailsPopup = button.nextElementSibling;
+                detailsPopup.classList.toggle('active');
+            }
+
+            function closeProductDetails(button) {
+                const popup = button.closest('.product-details-popup');
+                popup.classList.remove('active');
+            }
+
+            function toggleEditPopup(button) {
+                const detailsPopup = button.closest('.product-details-popup');
+                detailsPopup.classList.remove('active');
+                const editPopup = button.closest('.handle-product').querySelector('.edit-product-popup');
+                editPopup.classList.add('active');
+            }
+
+            function saveChanges(button) {
+                let confirmAction = confirm("Bạn có chắc chắn muốn lưu các thay đổi?");
+                if (confirmAction) {
+                    alert("Đã lưu thay đổi thành công!");
+                    const editPopup = button.closest('.edit-product-popup');
+                    editPopup.classList.remove('active');
+                }
+            }
+
+            function cancelEdit(button) {
+                let confirmAction = confirm("Bạn có chắc chắn muốn hủy các thay đổi?");
+                if (confirmAction) {
+                    const editPopup = button.closest('.edit-product-popup');
+                    editPopup.classList.remove('active');
+                }
+            }
+
+            function confirmDeleteImage(button) {
+                let confirmAction = confirm("Bạn có chắc chắn muốn xóa ảnh này không?");
+                if (confirmAction) {
+                    alert("Đã xóa ảnh thành công!");
+                } else {
+                    alert("Đã hủy xóa ảnh!");
+                }
+            }
+
+            // Thêm event listener để đóng popup khi click ra ngoài
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.handle-product')) {
+                    const allPopups = document.querySelectorAll('.product-details-popup, .edit-product-popup');
+                    allPopups.forEach(popup => {
+                        popup.classList.remove('active');
+                    });
+                }
+            });
+
+            // Ngăn chặn việc đóng popup khi click vào bên trong
+            document.querySelectorAll('.product-details-popup, .edit-product-popup').forEach(popup => {
+                popup.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                });
+            });
+            $(document).ready(function() {
+                $(".btn").click(function() {
+                    $(".form-signin").toggleClass("form-signin-left");
+                    $(".form-signup").toggleClass("form-signup-left");
+                    $(".frame").toggleClass("frame-long");
+                    $(".signup-inactive").toggleClass("signup-active");
+                    $(".signin-active").toggleClass("signin-inactive");
+                    $(".forgot").toggleClass("forgot-left");   
+                    $(this).removeClass("idle").addClass("active");
+                });
+            });
+            
+            $(function() {
+              $(".btn-signup").click(function() {
+                $(".links").css("display", "none"); // Ẩn phần ul.links chứa các nút sign in/sign up
+                $(".form-signup-left").toggleClass("form-signup-down");
+                $(".success").toggleClass("success-left"); 
+                $(".frame").toggleClass("frame-short");
+                $(".success").prepend('<h2 style="color: white; margin-bottom: 20px;">Chào mừng bạn đến với chúng tôi!</h2>');
+              });
+            });
+            
+            $(function() {
+              $(".btn-signin").click(function() {
+              $(".btn-animate").toggleClass("btn-animate-grow");
+              $(".welcome").toggleClass("welcome-left");
+              $(".cover-photo").toggleClass("cover-photo-down");
+              $(".frame").toggleClass("frame-short");
+              $(".profile-photo").toggleClass("profile-photo-down");
+              $(".btn-goback").toggleClass("btn-goback-up");
+              $(".forgot").toggleClass("forgot-fade");
+              });
+            });
+
+            $(document).ready(function() {
+                $(".btn-login-now").click(function() {
+                    window.location.reload();
+                });
+            });
+        </script>
+        <script src="./asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+
