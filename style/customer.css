@@ -188,3 +188,59 @@
     }
 
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.modal_actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn_2 {
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.confirm {
+    background-color: #35635A;
+    color: white;
+    border: none;
+}
+
+.cancel {
+    background-color: #ccc;
+    color: black;
+}
+
+.modal input {
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #35635A;
+    border-radius: 5px;
+}

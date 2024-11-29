@@ -436,7 +436,7 @@
                         <button class="feature-change-info-button" style="
                             background-color: #35635A;
                             color: white;
-                        ">Chỉnh sửa
+                        " onclick="window.location.href='#editModal'">Chỉnh sửa
                         </button>
                         <button onclick="confirmDeleteCustomer()" class="feature-change-info-button" style="
                             background-color: rgb(217, 94, 94); 
@@ -512,15 +512,55 @@
             function confirmDeleteCustomer() {
                 let confirmAction = confirm("Bạn có chắc chắn muốn xoá khách hàng này không?");
                 if (confirmAction) {
-                    // Thực hiện hành động khi người dùng nhấn "OK"
                     alert("Yêu cầu đã được thực hiện.");
                 } else {
-                    // Hành động khi người dùng nhấn "Cancel"
                     alert("Yêu cầu đã bị hủy.");
                 }
             }
             
+            function confirmEditCustomer() {
+                alert("Xác nhận thay đổi thông tin khách hàng");
+                window.location.href = "#"; // Đóng modal sau khi xác nhận
+            }
         </script>
         <script src="./asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <div id="editModal" class="modal">
+            <div class="modal_content">
+                <h2>Chỉnh sửa thông tin</h2>
+                <div style="margin: 20px 0;">
+                    <div style="margin: 10px 0;">
+                        <label>Họ và tên:</label>
+                        <input type="text" style="width: 100%; padding: 5px;">
+                    </div>
+                    <div style="margin: 10px 0;">
+                        <label>Số điện thoại:</label>
+                        <input type="text" style="width: 100%; padding: 5px;">
+                    </div>
+                    <div style="margin: 10px 0;">
+                        <label>Địa chỉ:</label>
+                        <input type="text" style="width: 100%; padding: 5px;">
+                    </div>
+                    <div style="margin: 10px 0;">
+                        <label>Email:</label>
+                        <input type="email" style="width: 100%; padding: 5px;">
+                    </div>
+                    <div style="margin: 10px 0;">
+                        <label>Giới tính:</label>
+                        <select style="width: 100%; padding: 5px;">
+                            <option value="nam">Nam</option>
+                            <option value="nu">Nữ</option>
+                        </select>
+                    </div>
+                    <div style="margin: 10px 0;">
+                        <label>Quê quán:</label>
+                        <input type="text" style="width: 100%; padding: 5px;">
+                    </div>
+                </div>
+                <div class="modal_actions">
+                    <button onclick="confirmEditCustomer()" class="btn_2 confirm">Xác nhận</button>
+                    <a href="#" class="btn_2 cancel">Hủy</a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
