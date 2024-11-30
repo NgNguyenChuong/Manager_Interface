@@ -1,11 +1,17 @@
-p,button,input,h1,h2,h3,h4,h5
+p,button,input,h1,h2,h3,h4,h5,span
 {
     display: inline-block;
     font-family: "Roboto", Arial;
     margin-top: 0;
     margin-bottom: 0;
 }
-
+a{
+    text-decoration: none;
+    font-family: "Roboto", Arial;
+}
+div{
+    font-family: "Roboto", Arial;
+}   
 @font-face {
     font-family: 'Roboto';
     src: url('../transfonter.org-20241125-072008/Roboto-Italic.eot');
